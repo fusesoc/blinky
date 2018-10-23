@@ -1,0 +1,54 @@
+CAPI=2:
+name : fusesoc:utils:blinky:0
+
+filesets:
+  rtl:
+    files: [blinky.v : {file_type : verilogSource}]
+
+  proginfo:
+    files: [sw/proginfo.py : {file_type : user, copyto : proginfo.py}]
+  tb:
+    files: [blinky_tb.v : {file_type : verilogSource}]
+    depend: [vlog_tb_utils]
+
+  tinyfpga_bx:
+    files: [tinyfpga_bx/pinout.pcf : {file_type : PCF}]
+targets:
+  default:
+    filesets : [rtl]
+  sim:
+    default_tool: icarus
+    filesets : [rtl, tb]
+    parameters : [clk_freq_hz, pulses]
+    tools:
+      modelsim:
+        vlog_options: [-timescale=1ns/1ns]
+      xsim:
+        xelab_options: [--timescale, 1ns/1ns]
+    toplevel: blinky_tb
+
+  tinyfpga_bx:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, tinyfpga_bx]
+    hooks:
+      post_run: [tinyprog]
+    parameters : [clk_freq_hz=16000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--lp8k, --package, cm81]
+        pnr: next
+    toplevel : blinky
+
+parameters:
+  clk_freq_hz:
+    datatype    : int
+    description : Clock frequency in Hz
+    paramtype   : vlogparam
+  pulses:
+    datatype    : int
+    description : Number of pulses to run in testbench
+    paramtype   : vlogparam
+
+scripts:
+  tinyprog:
+    cmd : [python, proginfo.py, tinyprog]
