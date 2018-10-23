@@ -50,3 +50,7 @@ The following boards are currently supported
 ### tinyfpga_bx
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
+
+### de0_nano
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593

@@ -2,6 +2,10 @@ CAPI=2:
 name : fusesoc:utils:blinky:0
 
 filesets:
+  de0_nano:
+    files:
+      - de0_nano/de0_nano.sdc : {file_type : SDC}
+      - de0_nano/pinmap.tcl   : {file_type: tclSource}
   rtl:
     files: [blinky.v : {file_type : verilogSource}]
 
@@ -16,6 +20,17 @@ filesets:
 targets:
   default:
     filesets : [rtl]
+
+  de0_nano:
+    default_tool : quartus
+    filesets : [rtl, de0_nano]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone IV E
+        device : EP4CE22F17C6
+    toplevel: blinky
+
   sim:
     default_tool: icarus
     filesets : [rtl, tb]
