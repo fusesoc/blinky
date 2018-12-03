@@ -23,6 +23,11 @@ filesets:
   tinyfpga_bx:
     files: [tinyfpga_bx/pinout.pcf : {file_type : PCF}]
 
+  upduino2:
+    files:
+      - upduino2/blinky_upduino2.v : {file_type : verilogSource}
+      - upduino2/pinout.pcf : {file_type : PCF}
+
 targets:
   default:
     filesets : [rtl]
@@ -72,6 +77,17 @@ targets:
         pnr: next
     toplevel : blinky
 
+  upduino2:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, upduino2]
+    hooks:
+      post_run: [iceprog]
+    tools:
+      icestorm:
+        nextpnr_options : [--up5k]
+        pnr: next
+    toplevel : blinky_upduino2
+
 parameters:
   clk_freq_hz:
     datatype    : int
@@ -83,5 +99,7 @@ parameters:
     paramtype   : vlogparam
 
 scripts:
+  iceprog:
+    cmd : [python, proginfo.py, iceprog]
   tinyprog:
     cmd : [python, proginfo.py, tinyprog]

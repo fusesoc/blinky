@@ -58,3 +58,7 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 ### lx9_microboard
 
 https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g-3074457345628965461/
+
+### Upduino 2
+
+http://www.gnarlygrey.com/
