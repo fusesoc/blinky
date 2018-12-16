@@ -25,8 +25,8 @@ filesets:
 
   ulx3s:
     files:
-      - ulx3s/ulx3s_empty.config : {file_type : user}
-      - ulx3s/ulx3s_v20.lpf : {file_type : LPF}
+      - ulx3s/ulx3s_empty.config : {file_type : user, copyto : ulx3s_empty.config}
+      - ulx3s/ulx3s_v20.lpf : {file_type : LPF, copyto : ulx3s_v20.lpf}
 
   upduino2:
     files:
@@ -88,7 +88,7 @@ targets:
     parameters : [clk_freq_hz=25000000]
     tools:
       trellis:
-        nextpnr_options : [--45k --basecfg ../src/fusesoc_utils_blinky_0/ulx3s/ulx3s_empty.config --lpf ../src/fusesoc_utils_blinky_0/ulx3s/ulx3s_v20.lpf]
+        nextpnr_options : [--45k --basecfg ulx3s_empty.config --lpf ulx3s_v20.lpf]
     toplevel : blinky
 
   upduino2:
