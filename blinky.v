@@ -7,7 +7,9 @@ module blinky
 
    always @(posedge clk) begin
       count <= count + 1;
+/* verilator lint_off WIDTH */
       if (count == clk_freq_hz-1) begin
+/* verilator lint_on WIDTH */
 	 q <= !q;
 	 count <= 0;
       end

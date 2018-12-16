@@ -33,6 +33,12 @@ filesets:
       - upduino2/blinky_upduino2.v : {file_type : verilogSource}
       - upduino2/pinout.pcf : {file_type : PCF}
 
+  verilator_tb:
+    files:
+      - bench/blinky_tb.cpp : {file_type : cppSource}
+      - bench/testb.h : {file_type : user}
+
+
 targets:
   default:
     filesets : [rtl]
@@ -101,6 +107,15 @@ targets:
         nextpnr_options : [--up5k]
         pnr: next
     toplevel : blinky_upduino2
+
+  verilator:
+    default_tool: verilator
+    filesets : [rtl, verilator_tb]
+    tools:
+      verilator:
+        verilator_options : [--trace]
+    parameters : [clk_freq_hz=10000]
+    toplevel : blinky
 
 parameters:
   clk_freq_hz:
