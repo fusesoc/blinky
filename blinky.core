@@ -23,6 +23,11 @@ filesets:
   tinyfpga_bx:
     files: [tinyfpga_bx/pinout.pcf : {file_type : PCF}]
 
+  ulx3s:
+    files:
+      - ulx3s/ulx3s_empty.config : {file_type : user}
+      - ulx3s/ulx3s_v20.lpf : {file_type : LPF}
+
   upduino2:
     files:
       - upduino2/blinky_upduino2.v : {file_type : verilogSource}
@@ -75,6 +80,15 @@ targets:
       icestorm:
         nextpnr_options : [--lp8k, --package, cm81]
         pnr: next
+    toplevel : blinky
+
+  ulx3s:
+    default_tool : trellis
+    filesets : [rtl, proginfo, ulx3s]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      trellis:
+        nextpnr_options : [--45k --basecfg ../src/fusesoc_utils_blinky_0/ulx3s/ulx3s_empty.config --lpf ../src/fusesoc_utils_blinky_0/ulx3s/ulx3s_v20.lpf]
     toplevel : blinky
 
   upduino2:
