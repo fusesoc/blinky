@@ -62,3 +62,7 @@ https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g
 ### Upduino 2
 
 http://www.gnarlygrey.com/
+
+### ULX3S
+
+https://github.com/emard/ulx3s
