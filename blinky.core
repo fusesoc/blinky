@@ -2,6 +2,11 @@ CAPI=2:
 name : fusesoc:utils:blinky:0
 
 filesets:
+  apf27:
+    files:
+      - apf27/blinky.ucf :  {file_type : UCF}
+      - apf27/options.tcl : {file_type : tclSource}
+
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -39,6 +44,18 @@ filesets:
 targets:
   default:
     filesets : [rtl]
+
+  apf27:
+    default_tool : ise
+    filesets : [rtl, apf27]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      ise:
+        family  : Spartan3A
+        device  : xc3s200a
+        package : ft256
+        speed   : -5
+    toplevel : blinky
 
   de0_nano:
     default_tool : quartus
