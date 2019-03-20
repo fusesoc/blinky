@@ -10,6 +10,9 @@ filesets:
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
+  opos6ul_sp:
+    files: [opos6ul_sp/blinky.ucf : {file_type : UCF}]
+
   rtl:
     files: [blinky.v : {file_type : verilogSource}]
 
@@ -56,6 +59,18 @@ targets:
         family  : Spartan6
         device  : xc6slx9
         package : csg324
+        speed   : -2
+    toplevel : blinky
+
+  opos6ul_sp:
+    default_tool : ise
+    filesets : [rtl, opos6ul_sp]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      ise:
+        family  : Spartan6
+        device  : xc6slx9
+        package : csg225
         speed   : -2
     toplevel : blinky
 
