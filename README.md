@@ -22,7 +22,7 @@ Clone the repo somewhere `git clone https://github.com/fusesoc/blinky`
 
 Create an empty workspace directory somewhere and navigate there
 
-In your workspace directory, either run `fusesoc library add blinky /path/to/repo` to have it available when running from this workspace, or `fusesoc library add --global /path/to/repo` to have it available in all workspaces
+In your workspace directory, either run `fusesoc library add blinky /path/to/repo` to have it available when running from this workspace, or `fusesoc library add --global blinky /path/to/repo` to have it available in all workspaces
 
 If you just want to have it available temporarily, run with `--cores-root=/path/to/repo ...` as the first argument to FuseSoC
 
