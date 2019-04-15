@@ -59,6 +59,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
 https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g-3074457345628965461/
 
+### nexys_a7
+
+https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum
+
 ### opos6ul_sp
 
 http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
