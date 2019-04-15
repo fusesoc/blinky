@@ -47,9 +47,9 @@ Board support
 
 The following boards are currently supported
 
-### tinyfpga_bx
+### afp27
 
-https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
+http://www.armadeus.org/wiki/index.php?title=APF27
 
 ### de0_nano
 
@@ -62,6 +62,14 @@ https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g
 ### opos6ul_sp
 
 http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
+
+### tinyfpga_bx
+
+https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
+
+### ulx3s
+
+https://radiona.org/ulx3s
 
 ### Upduino 2
 
