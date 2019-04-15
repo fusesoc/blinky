@@ -78,3 +78,7 @@ https://radiona.org/ulx3s
 ### Upduino 2
 
 http://www.gnarlygrey.com/
+
+### ULX3S
+
+https://github.com/emard/ulx3s
