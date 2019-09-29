@@ -43,6 +43,11 @@ filesets:
       - upduino2/blinky_upduino2.v : {file_type : verilogSource}
       - upduino2/pinout.pcf : {file_type : PCF}
 
+  zrtech_v2:
+    files:
+      - zrtech_v2/zrtech_v2.sdc : {file_type : SDC}
+      - zrtech_v2/pinmap.tcl    : {file_type: tclSource}
+
 targets:
   default:
     filesets : [rtl]
@@ -144,6 +149,16 @@ targets:
         nextpnr_options : [--up5k]
         pnr: next
     toplevel : blinky_upduino2
+
+  zrtech_v2:
+    default_tool : quartus
+    filesets : [rtl, zrtech_v2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone IV E
+        device : EP4CE6E22C8
+    toplevel: blinky
 
 parameters:
   clk_freq_hz:
