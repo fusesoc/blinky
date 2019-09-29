@@ -12,6 +12,11 @@ filesets:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
       - de0_nano/pinmap.tcl   : {file_type: tclSource}
 
+  de1_soc_revF:
+    files:
+      - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
+      - de1_soc_revF/pinmap.tcl       : {file_type : tclSource}
+
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
@@ -72,6 +77,17 @@ targets:
       quartus:
         family : Cyclone IV E
         device : EP4CE22F17C6
+    toplevel: blinky
+
+  de1_soc_revF:
+    default_tool : quartus
+    filesets : [rtl, de1_soc_revF]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSEMA5F31C6
+        board_device_index : 2
     toplevel: blinky
 
   lx9_microboard:
