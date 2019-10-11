@@ -51,6 +51,10 @@ The following boards are currently supported
 
 http://www.armadeus.org/wiki/index.php?title=APF27
 
+### cyc1000
+
+https://shop.trenz-electronic.de/en/TEI0003-02-CYC1000-with-Cyclone-10-FPGA-8-MByte-SDRAM
+
 ### de0_nano
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593

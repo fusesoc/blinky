@@ -7,6 +7,11 @@ filesets:
       - apf27/blinky.ucf :  {file_type : UCF}
       - apf27/options.tcl : {file_type : tclSource}
 
+  cyc1000:
+    files:
+      - cyc1000/cyc1000.sdc : {file_type : SDC}
+      - cyc1000/pinmap.tcl  : {file_type: tclSource}
+
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -59,6 +64,16 @@ targets:
         package : ft256
         speed   : -5
     toplevel : blinky
+
+  cyc1000:
+    <<: *default
+    default_tool : quartus
+    filesets_append : [cyc1000]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      quartus:
+        family : Cyclone 10 LP
+        device : 10CL025YU256C8G
 
   de0_nano:
     default_tool : quartus
