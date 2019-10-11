@@ -44,8 +44,9 @@ filesets:
       - upduino2/pinout.pcf : {file_type : PCF}
 
 targets:
-  default:
+  default: &default
     filesets : [rtl]
+    toplevel: ["is_toplevel? (blinky)"]
 
   apf27:
     default_tool : ise
