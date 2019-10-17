@@ -55,6 +55,10 @@ http://www.armadeus.org/wiki/index.php?title=APF27
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
+### de1_soc
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=165&No=836
+
 ### lx9_microboard
 
 https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g-3074457345628965461/
@@ -78,3 +82,7 @@ https://radiona.org/ulx3s
 ### Upduino 2
 
 http://www.gnarlygrey.com/
+
+### zrtech_v2
+
+http://land-boards.com/blwiki/index.php?title=ZrTech_V2_EP4CE6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
