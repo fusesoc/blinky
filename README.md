@@ -51,6 +51,10 @@ The following boards are currently supported
 
 http://www.armadeus.org/wiki/index.php?title=APF27
 
+### arty_a7_35t
+
+https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
+
 ### cyc1000
 
 https://shop.trenz-electronic.de/en/TEI0003-02-CYC1000-with-Cyclone-10-FPGA-8-MByte-SDRAM
