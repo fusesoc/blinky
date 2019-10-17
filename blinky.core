@@ -7,6 +7,9 @@ filesets:
       - apf27/blinky.ucf :  {file_type : UCF}
       - apf27/options.tcl : {file_type : tclSource}
 
+  arty_a7_35t:
+    files: [arty_a7_35t/blinky.xdc : {file_type : xdc}]
+
   cyc1000:
     files:
       - cyc1000/cyc1000.sdc : {file_type : SDC}
@@ -73,6 +76,15 @@ targets:
         device  : xc3s200a
         package : ft256
         speed   : -5
+    toplevel : blinky
+
+  arty_a7_35t:
+    default_tool : vivado
+    filesets : [rtl, arty_a7_35t]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7a35ticsg324-1L
     toplevel : blinky
 
   cyc1000:
