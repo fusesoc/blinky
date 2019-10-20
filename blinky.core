@@ -25,6 +25,9 @@ filesets:
       - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
       - de1_soc_revF/pinmap.tcl       : {file_type : tclSource}
 
+  ice40-hx8k_breakout:
+    files: [ice40-hx8k_breakout/pinout.pcf : {file_type : PCF}]
+
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
@@ -117,6 +120,16 @@ targets:
         device : 5CSEMA5F31C6
         board_device_index : 2
     toplevel: blinky
+
+  ice40-hx8k_breakout:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, ice40-hx8k_breakout]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx8k, --package, ct256]
+        pnr : next
+    toplevel : blinky
 
   lx9_microboard:
     default_tool : ise
