@@ -25,7 +25,6 @@ filesets:
       - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
       - de1_soc_revF/pinmap.tcl       : {file_type : tclSource}
 
-
   ice40-hx8k_breakout:
     files: [ice40-hx8k_breakout/pinout.pcf : {file_type : PCF}]
 
