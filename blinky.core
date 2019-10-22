@@ -53,6 +53,7 @@ filesets:
     files:
       - ulx3s/ulx3s_empty.config : {file_type : user, copyto : ulx3s_empty.config}
       - ulx3s/ulx3s_v20.lpf : {file_type : LPF, copyto : ulx3s_v20.lpf}
+      - ulx3s/blinky_ulx3s.v : {file_type : verilogSource}
 
   upduino2:
     files:
@@ -187,14 +188,25 @@ targets:
         pnr: next
     toplevel : blinky
 
-  ulx3s:
+  ulx3s_45: &ulx3s
     default_tool : trellis
+    description : Radiona ULX3S board with 45k FPGA
     filesets : [rtl, proginfo, ulx3s]
-    parameters : [clk_freq_hz=25000000]
+    hooks:
+      post_run: [ujprog]
     tools:
+      diamond: {part: LFE5U-45F-6BG381C}
       trellis:
         nextpnr_options : [--45k --basecfg ulx3s_empty.config --lpf ulx3s_v20.lpf]
-    toplevel : blinky
+    toplevel : blinky_ulx3s
+
+  ulx3s_85:
+    <<: *ulx3s
+    description : Radiona ULX3S board with 85k FPGA
+    tools:
+      diamond: {part: LFE5U-85F-6BG381C}
+      trellis:
+        nextpnr_options : [--85k --basecfg ulx3s_empty.config --lpf ulx3s_v20.lpf]
 
   upduino2:
     default_tool : icestorm
@@ -232,3 +244,5 @@ scripts:
     cmd : [python, proginfo.py, iceprog]
   tinyprog:
     cmd : [python, proginfo.py, tinyprog]
+  ujprog:
+    cmd : [python, proginfo.py, ujprog]

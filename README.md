@@ -87,9 +87,11 @@ http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
 
-### ulx3s
+### ulx3s_*
 
 https://radiona.org/ulx3s
+
+ULX3S comes in different sizes. The targets `ulx3s_45` and `ulx3s_85` are defined for different FPGA sizes
 
 ### Upduino 2
 
