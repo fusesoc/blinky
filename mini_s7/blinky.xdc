@@ -22,4 +22,4 @@ create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {cl
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk]
 
 ## LED
-set_property -dict { PACKAGE_PIN D14   IOSTANDARD LVCMOS33 } [get_ports { q }]; #IO_L18P_T2_A24_15 Sch=led[0]
+set_property -dict { PACKAGE_PIN D14   IOSTANDARD LVCMOS33 } [get_ports { q }]; # 
