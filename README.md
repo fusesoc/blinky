@@ -83,6 +83,10 @@ https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-cu
 
 http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
 
+### S7 Mini
+
+https://shop.trenz-electronic.de/en/TE0890-01-25-1C-S7-Mini-Fully-Open-Source-Module-with-Xilinx-Spartan-7-7S25-64-MBit-HyperRAM
+
 ### tinyfpga_bx
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
