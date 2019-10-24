@@ -47,6 +47,10 @@ Board support
 
 The following boards are currently supported
 
+### AnalogMax
+
+https://www.arrow.com/en/products/tei0001-03-16-c8/trenz-electronic-gmbh
+
 ### afp27
 
 http://www.armadeus.org/wiki/index.php?title=APF27
