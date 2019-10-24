@@ -2,6 +2,11 @@ CAPI=2:
 name : fusesoc:utils:blinky:0
 
 filesets:
+  AnalogMax:
+    files:
+      - AnalogMax/AnalogMax.sdc : {file_type : SDC}
+      - AnalogMax/pinmap.tcl  : {file_type: tclSource}
+
   apf27:
     files:
       - apf27/blinky.ucf :  {file_type : UCF}
@@ -71,6 +76,16 @@ targets:
   default: &default
     filesets : [rtl]
     toplevel: ["is_toplevel? (blinky)"]
+
+  AnalogMax:
+    default_tool : quartus
+    filesets : [rtl, AnalogMax]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      quartus:
+        family : MAX 10
+        device : 10M08SAU169C8G
+    toplevel: blinky
 
   apf27:
     default_tool : ise
