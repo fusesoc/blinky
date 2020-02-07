@@ -105,6 +105,10 @@ ULX3S comes in different sizes. The targets `ulx3s_45` and `ulx3s_85` are define
 
 http://www.gnarlygrey.com/
 
+### zcu106
+
+https://www.xilinx.com/products/boards-and-kits/zcu106.html
+
 ### zrtech_v2
 
 http://land-boards.com/blwiki/index.php?title=ZrTech_V2_EP4CE6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
