@@ -25,6 +25,21 @@ filesets:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
       - de0_nano/pinmap.tcl   : {file_type: tclSource}
 
+  de0_nanosoc:
+    files:
+      - de0_nanosoc/de0_nanosoc.sdc  : {file_type : SDC}
+      - de0_nanosoc/pinmap.tcl       : {file_type : tclSource}
+
+  de10_soc:
+    files:
+      - de10_soc/de10_soc.sdc : {file_type : SDC}
+      - de10_soc/pinmap.tcl  : {file_type : tclSource}
+
+  soc_kit:
+    files:
+      - soc_kit/soc_kit.sdc : {file_type : SDC}
+      - soc_kit/pinmap.tcl  : {file_type : tclSource}
+
   de1_soc_revF:
     files:
       - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
@@ -48,6 +63,11 @@ filesets:
 
   proginfo:
     files: [sw/proginfo.py : {file_type : user, copyto : proginfo.py}]
+
+  pynq_z2:
+    files:
+      - pynq_z2/blinky_pynq_z2.v : {file_type : verilogSource}
+      - pynq_z2/blinky.xdc : {file_type : xdc}
 
   tb:
     files: [blinky_tb.v : {file_type : verilogSource}]
@@ -133,6 +153,17 @@ targets:
         device : EP4CE22F17C6
     toplevel: blinky
 
+  de0_nanosoc:
+    default_tool : quartus
+    filesets : [rtl, de0_nanosoc]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSEMA4U23C6
+        board_device_index : 2
+    toplevel: blinky
+
   de1_soc_revF:
     default_tool : quartus
     filesets : [rtl, de1_soc_revF]
@@ -142,6 +173,30 @@ targets:
         family : Cyclone V
         device : 5CSEMA5F31C6
         board_device_index : 2
+    toplevel: blinky
+
+  de10_soc:
+    default_tool : quartus
+    filesets : [rtl, de10_soc]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSXFC6D6F31C6
+        cable : "DE-SoC"
+        board_device_index : 2
+    toplevel: blinky
+
+  soc_kit:
+    default_tool : quartus
+    filesets : [rtl, soc_kit]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSXFC6D6F31C6
+        board_device_index : 2
+        cable : "USB-BlasterII"  # Is sufficient
     toplevel: blinky
 
   ice40-hx8k_breakout:
@@ -195,6 +250,15 @@ targets:
         package : csg225
         speed   : -2
     toplevel : blinky
+
+  pynq_z2:
+    default_tool: vivado
+    description : Pynq-Z2 Zynq Z7020 Evaluation Kit
+    filesets : [rtl, pynq_z2]
+    tools:
+      vivado:
+        part : xc7z020clg400-1
+    toplevel : blinky_pynq_z2
 
   sim:
     default_tool: icarus
