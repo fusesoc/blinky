@@ -83,6 +83,10 @@ https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g
 
 https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum
 
+### nexys_video
+
+https://reference.digilentinc.com/reference/programmable-logic/nexys-video/start
+
 ### opos6ul_sp
 
 http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
