@@ -51,6 +51,11 @@ filesets:
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
+  max1000:
+    files:
+      - max1000/max1000.sdc : {file_type : SDC}
+      - max1000/pinmap.tcl  : {file_type: tclSource}
+
   mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
 
   nexys_a7: {files: [nexys_a7/blinky.xdc : {file_type : xdc}]}
@@ -222,6 +227,16 @@ targets:
         package : csg324
         speed   : -2
     toplevel : blinky
+
+  max1000:
+    <<: *default
+    default_tool : quartus
+    filesets_append : [max1000]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      quartus:
+        family : MAX 10
+        device : 10M08SAU169C8G
 
   mini_s7:
     default_tool: vivado
