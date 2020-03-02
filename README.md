@@ -113,6 +113,10 @@ ULX3S comes in different sizes. The targets `ulx3s_45` and `ulx3s_85` are define
 
 http://www.gnarlygrey.com/
 
+### xc6sl9_hseda_eda6.1
+
+http://www.hseda.com/product/xilinx/XC6SLX9COREV1.0/XC6SLX9CORE.htm
+
 ### zcu106
 
 https://www.xilinx.com/products/boards-and-kits/zcu106.html
