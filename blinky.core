@@ -379,9 +379,9 @@ targets:
         device : EP4CE6E22C8
     toplevel: blinky
 
-  zybo_z7-10:
+  zybo_z7-10: &zybo_z7
     default_tool: vivado
-    description : Digilent Zybo Z7-10 Dev Kit
+    description : Digilent Zybo Z7-10 SoC Kit
     filesets : [rtl, zybo_z7]
     tools:
       vivado:
@@ -389,14 +389,12 @@ targets:
     toplevel : blinky_zybo_z7
 
   zybo_z7-20:
-    default_tool: vivado
-    description : Digilent Zybo Z7-20 Dev Kit
-    filesets : [rtl, zybo_z7]
+    <<: *zybo_z7
+    description : Digilent Zybo Z7-20 SoC Kit
     tools:
       vivado:
         part : xc7z020clg400-1
-    toplevel : blinky_zybo_z7
-
+        
 parameters:
   clk_freq_hz:
     datatype    : int
