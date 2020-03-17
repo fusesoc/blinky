@@ -107,6 +107,11 @@ filesets:
       - zrtech_v2/zrtech_v2.sdc : {file_type : SDC}
       - zrtech_v2/pinmap.tcl    : {file_type: tclSource}
 
+  zybo_z7:
+    files:
+      - zybo_z7/blinky_zybo_z7.v : {file_type : verilogSource}
+      - zybo_z7/blinky.xdc : {file_type : xdc}
+
 targets:
   default: &default
     filesets : [rtl]
@@ -373,6 +378,24 @@ targets:
         family : Cyclone IV E
         device : EP4CE6E22C8
     toplevel: blinky
+
+  zybo_z7-10:
+    default_tool: vivado
+    description : Digilent Zybo Z7-10 Dev Kit
+    filesets : [rtl, zybo_z7]
+    tools:
+      vivado:
+        part : xc7z010clg400-1
+    toplevel : blinky_zybo_z7
+
+  zybo_z7-20:
+    default_tool: vivado
+    description : Digilent Zybo Z7-20 Dev Kit
+    filesets : [rtl, zybo_z7]
+    tools:
+      vivado:
+        part : xc7z020clg400-1
+    toplevel : blinky_zybo_z7
 
 parameters:
   clk_freq_hz:
