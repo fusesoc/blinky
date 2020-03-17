@@ -124,3 +124,9 @@ https://www.xilinx.com/products/boards-and-kits/zcu106.html
 ### zrtech_v2
 
 http://land-boards.com/blwiki/index.php?title=ZrTech_V2_EP4CE6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
+
+### Zybo Z7-10 & Zybo Z7-20
+
+https://store.digilentinc.com/zybo-z7-zynq-7000-arm-fpga-soc-development-board/
+
+Zybo Z7 comes with two variants of the Zynq SoC. The targets `zybo_z7-10` and `zybo_z7-20` are defined for different SoC configurations.
