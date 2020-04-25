@@ -116,7 +116,6 @@ filesets:
 
   ulx3s:
     files:
-      - ulx3s/ulx3s_empty.config : {file_type : user, copyto : ulx3s_empty.config}
       - ulx3s/ulx3s_v20.lpf : {file_type : LPF, copyto : ulx3s_v20.lpf}
       - ulx3s/blinky_ulx3s.v : {file_type : verilogSource}
 
@@ -453,7 +452,7 @@ targets:
     tools:
       diamond: {part: LFE5U-45F-6BG381C}
       trellis:
-        nextpnr_options : [--45k --basecfg ulx3s_empty.config --lpf ulx3s_v20.lpf]
+        nextpnr_options : [--package, CABGA381, --45k, --lpf, ulx3s_v20.lpf]
     toplevel : blinky_ulx3s
 
   ulx3s_85:
@@ -462,7 +461,7 @@ targets:
     tools:
       diamond: {part: LFE5U-85F-6BG381C}
       trellis:
-        nextpnr_options : [--85k --basecfg ulx3s_empty.config --lpf ulx3s_v20.lpf]
+        nextpnr_options : [--package, CABGA381, --85k, --lpf, ulx3s_v20.lpf]
 
   upduino2:
     default_tool : icestorm
