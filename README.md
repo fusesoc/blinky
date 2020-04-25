@@ -55,6 +55,10 @@ https://www.arrow.com/en/products/tei0001-03-16-c8/trenz-electronic-gmbh
 
 http://www.armadeus.org/wiki/index.php?title=APF27
 
+### Alhambra II
+
+https://alhambrabits.com/alhambra/
+
 ### arty_a7_35t
 
 https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
