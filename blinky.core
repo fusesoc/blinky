@@ -65,6 +65,9 @@ filesets:
   opos6ul_sp:
     files: [opos6ul_sp/blinky.ucf : {file_type : UCF}]
 
+  pipistrello:
+    files: [pipistrello/blinky.ucf : {file_type : UCF}]
+
   rtl:
     files: [blinky.v : {file_type : verilogSource}]
 
@@ -283,6 +286,18 @@ targets:
         device  : xc6slx9
         package : csg225
         speed   : -2
+    toplevel : blinky
+
+  pipistrello:
+    default_tool : ise
+    filesets : [rtl, pipistrello]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan6
+        device  : xc6slx45
+        package : csg324
+        speed   : -3
     toplevel : blinky
 
   pynq_z2:
