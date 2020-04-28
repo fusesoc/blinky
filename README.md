@@ -95,6 +95,10 @@ https://reference.digilentinc.com/reference/programmable-logic/nexys-video/start
 
 http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
 
+### pipistrello
+
+http://pipistrello.saanlima.com/index.php?title=Welcome_to_Pipistrello
+
 ### S7 Mini
 
 https://shop.trenz-electronic.de/en/TE0890-01-25-1C-S7-Mini-Fully-Open-Source-Module-with-Xilinx-Spartan-7-7S25-64-MBit-HyperRAM
