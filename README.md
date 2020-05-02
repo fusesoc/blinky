@@ -75,6 +75,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=165&No=836
 
+### ecp5_evn
+
+https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard
+
 ### ice40hx1k_evb
 
 https://www.olimex.com/wiki/ICE40HX1K-EVB

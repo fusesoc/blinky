@@ -48,6 +48,9 @@ filesets:
       - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
       - de1_soc_revF/pinmap.tcl       : {file_type : tclSource}
 
+  ecp5_evn:
+    files: [ecp5_evn/blinky.lpf : {file_type : LPF}]
+
   ice40hx1k_evb:
     files: [ice40hx1k_evb/pinout.pcf : {file_type : PCF}]
 
@@ -230,6 +233,16 @@ targets:
         cable : "DE-SoC"
         board_device_index : 2
     toplevel: blinky
+
+  ecp5_evn:
+    default_tool : trellis
+    description : ECP5 Evaluation Board
+    filesets : [rtl, ecp5_evn]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      trellis:
+        nextpnr_options : [--um5g-85k --package CABGA381]
+    toplevel : blinky
 
   soc_kit:
     default_tool : quartus
