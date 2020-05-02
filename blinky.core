@@ -15,6 +15,9 @@ filesets:
   arty_a7_35t:
     files: [arty_a7_35t/blinky.xdc : {file_type : xdc}]
 
+  colorlight_5a75b:
+    files: [colorlight_5a75b/blinky.lpf : {file_type : LPF}]
+
   cyc1000:
     files:
       - cyc1000/cyc1000.sdc : {file_type : SDC}
@@ -163,6 +166,15 @@ targets:
     tools:
       vivado:
         part : xc7a35ticsg324-1L
+    toplevel : blinky
+
+  colorlight_5a75b:
+    default_tool : trellis
+    filesets : [rtl, colorlight_5a75b]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      trellis:
+        nextpnr_options : [--25k --package CABGA256 --speed 6 --freq 65]
     toplevel : blinky
 
   cyc1000:
