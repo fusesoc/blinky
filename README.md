@@ -71,6 +71,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=165&No=836
 
+### ice40hx1k_evb
+
+https://www.olimex.com/wiki/ICE40HX1K-EVB
+
 ### ice40-hx8k_breakout
 
 http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx
