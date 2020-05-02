@@ -59,6 +59,9 @@ filesets:
       - machXO2_breakout/blinky.lpf : {file_type : LPF}
       - machXO2_breakout/blinky_machXO2_breakout.v : {file_type : verilogSource}
 
+  machXO3_breakout:
+    files: [machXO3_breakout/blinky.lpf : {file_type : LPF}]
+
   max1000:
     files:
       - max1000/max1000.sdc : {file_type : SDC}
@@ -267,6 +270,15 @@ targets:
     tools:
       diamond: {part: LCMXO2-7000HE-4TG144C}
     toplevel : blinky_machXO2_breakout
+
+  machXO3_breakout:
+    default_tool : diamond
+    description : Lattice MachXO3LF Starter Kit LCMX03LF-6900C
+    filesets : [rtl, machXO3_breakout]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      diamond: {part: LCMXO3LF-6900C-5BG256C}
+    toplevel : blinky
 
   max1000:
     <<: *default
