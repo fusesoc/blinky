@@ -45,6 +45,9 @@ filesets:
       - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
       - de1_soc_revF/pinmap.tcl       : {file_type : tclSource}
 
+  ice40hx1k_evb:
+    files: [ice40hx1k_evb/pinout.pcf : {file_type : PCF}]
+
   ice40-hx8k_breakout:
     files: [ice40-hx8k_breakout/pinout.pcf : {file_type : PCF}]
 
@@ -219,6 +222,16 @@ targets:
         board_device_index : 2
         cable : "USB-BlasterII"  # Is sufficient
     toplevel: blinky
+
+  ice40hx1k_evb:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, ice40hx1k_evb]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx1k, --package, vq100]
+        pnr : next
+    toplevel : blinky
 
   ice40-hx8k_breakout:
     default_tool : icestorm
