@@ -120,6 +120,11 @@ filesets:
   xc6sl9_hseda_eda6.1:
     files: [xc6sl9_hseda_eda6.1/blinky.ucf : {file_type : UCF}]
 
+  zcu102:
+    files:
+      - zcu102/blinky_zcu102.v : {file_type : verilogSource}
+      - zcu102/blinky.xdc : {file_type : xdc}
+
   zcu106:
     files:
       - zcu106/blinky_zcu106.v : {file_type : verilogSource}
@@ -450,6 +455,15 @@ targets:
         package : tqg144
         speed   : -2
     toplevel : blinky
+
+  zcu102:
+    default_tool: vivado
+    description : Zynq UltraScale+ MPSoC ZCU102 Evaluation Kit
+    filesets : [rtl, zcu102]
+    tools:
+      vivado:
+        part : xczu9eg-ffvb1156-2-e
+    toplevel : blinky_zcu102
 
   zcu106:
     default_tool: vivado

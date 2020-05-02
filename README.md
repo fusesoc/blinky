@@ -145,6 +145,10 @@ http://www.gnarlygrey.com/
 
 http://www.hseda.com/product/xilinx/XC6SLX9COREV1.0/XC6SLX9CORE.htm
 
+### zcu102
+
+https://www.xilinx.com/products/boards-and-kits/zcu102.html
+
 ### zcu106
 
 https://www.xilinx.com/products/boards-and-kits/zcu106.html
