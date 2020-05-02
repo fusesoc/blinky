@@ -79,6 +79,9 @@ filesets:
       - pynq_z2/blinky_pynq_z2.v : {file_type : verilogSource}
       - pynq_z2/blinky.xdc : {file_type : xdc}
 
+  spartan_edge_accelerator_board:
+    files: [spartan_edge_accelerator_board/blinky.xdc : {file_type : xdc}]
+
   tb:
     files: [blinky_tb.v : {file_type : verilogSource}]
     depend: [vlog_tb_utils]
@@ -319,6 +322,16 @@ targets:
       xsim:
         xelab_options: [--timescale, 1ns/1ns]
     toplevel: blinky_tb
+
+  spartan_edge_accelerator_board:
+    default_tool : vivado
+    description : Spartan Edge Accelerator Board
+    filesets : [rtl, spartan_edge_accelerator_board]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7s15ftgb196-1
+    toplevel : blinky
 
   tinyfpga_bx:
     default_tool : icestorm
