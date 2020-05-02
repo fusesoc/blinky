@@ -59,6 +59,10 @@ http://www.armadeus.org/wiki/index.php?title=APF27
 
 https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
 
+### colorlight_5a75b
+
+https://fr.aliexpress.com/item/32281130824.html
+
 ### cyc1000
 
 https://shop.trenz-electronic.de/en/TEI0003-02-CYC1000-with-Cyclone-10-FPGA-8-MByte-SDRAM
