@@ -87,6 +87,10 @@ https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/MachXO2BreakoutBoard
 
+### machXO3_breakout
+
+https://www.latticesemi.com/products/developmentboardsandkits/machxo3lfstarterkit
+
 ### max1000
 
 https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KLE-8-MByte-RAM
