@@ -410,6 +410,7 @@ targets:
     tools:
       vivado:
         part : xc7z020clg400-1
+        
 parameters:
   clk_freq_hz:
     datatype    : int
