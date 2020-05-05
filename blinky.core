@@ -129,7 +129,7 @@ targets:
     parameters : [clk_freq_hz=12000000]
     tools:
       icestorm:
-        nextpnr_options : [--hx8k, --package, tq144:4k]
+        nextpnr_options : [--hx8k, --package, "tq144:4k"]
         pnr : next
     toplevel : blinky
 
