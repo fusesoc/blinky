@@ -2,6 +2,9 @@ CAPI=2:
 name : fusesoc:utils:blinky:0
 
 filesets:
+  alhambra_II:
+    files: [alhambra_II/pinout.pcf : {file_type : PCF}]
+
   AnalogMax:
     files:
       - AnalogMax/AnalogMax.sdc : {file_type : SDC}
@@ -144,6 +147,19 @@ targets:
   default: &default
     filesets : [rtl]
     toplevel: ["is_toplevel? (blinky)"]
+
+  alhambra_II:
+    default_tool : icestorm
+    description : Alhambra II iCE40-HX4K based open-source hardware board
+    hooks:
+      post_run: [iceprog]
+    filesets : [rtl, proginfo, alhambra_II]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx8k, --package, "tq144:4k"]
+        pnr : next
+    toplevel : blinky
 
   AnalogMax:
     default_tool : quartus
