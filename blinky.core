@@ -26,6 +26,11 @@ filesets:
       - cyc1000/cyc1000.sdc : {file_type : SDC}
       - cyc1000/pinmap.tcl  : {file_type: tclSource}
 
+  cisco-hwic-3g-cdma:
+    files:
+      - cisco-hwic-3g-cdma/cisco-hwic-3g-cdma.sdc : {file_type : SDC}
+      - cisco-hwic-3g-cdma/pinmap.tcl  : {file_type: tclSource}
+
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -210,6 +215,16 @@ targets:
       quartus:
         family : Cyclone 10 LP
         device : 10CL025YU256C8G
+
+  cisco-hwic-3g-cdma:
+    <<: *default
+    default_tool : quartus
+    filesets_append : [cisco-hwic-3g-cdma]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      quartus:
+        family : Cyclone II
+        device : EP2C35F484C8
 
   de0_nano:
     default_tool : quartus
