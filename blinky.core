@@ -1,5 +1,5 @@
 CAPI=2:
-name : fusesoc:utils:blinky:0
+name : fusesoc:utils:blinky:1.0
 
 filesets:
   alhambra_II:
@@ -542,8 +542,8 @@ parameters:
 
 scripts:
   iceprog:
-    cmd : [python, proginfo.py, iceprog]
+    cmd : [python3, proginfo.py, iceprog]
   tinyprog:
-    cmd : [python, proginfo.py, tinyprog]
+    cmd : [python3, proginfo.py, tinyprog]
   ujprog:
-    cmd : [python, proginfo.py, ujprog]
+    cmd : [python3, proginfo.py, ujprog]
