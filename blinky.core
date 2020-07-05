@@ -68,6 +68,11 @@ filesets:
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
+  kcu1500:
+    files:
+      - kcu1500/blinky_kcu1500.v : {file_type : verilogSource}
+      - kcu1500/blinky.xdc : {file_type : xdc}
+
   machXO2_breakout:
     files:
       - machXO2_breakout/blinky.lpf : {file_type : LPF}
@@ -322,6 +327,15 @@ targets:
         package : csg324
         speed   : -2
     toplevel : blinky
+
+  kcu1500:
+    default_tool: vivado
+    description : Kintex UltraScale KCU1500 Acceleration Development Kit
+    filesets : [rtl, kcu1500]
+    tools:
+      vivado:
+        part : xcku115-flvb2104-2-e
+    toplevel : blinky_kcu1500
 
   machXO2_breakout:
     default_tool : diamond

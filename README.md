@@ -96,6 +96,10 @@ http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakou
 
 https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g-3074457345628965461/
 
+### kcu1500
+
+https://www.xilinx.com/products/boards-and-kits/dk-u1-kcu1500-g.html
+
 ### machXO2_breakout
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/MachXO2BreakoutBoard
