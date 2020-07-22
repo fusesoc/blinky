@@ -15,6 +15,11 @@ filesets:
       - apf27/blinky.ucf :  {file_type : UCF}
       - apf27/options.tcl : {file_type : tclSource}
 
+  op6sp:
+    files:
+      - op6sp/blinky.ucf :  {file_type : UCF}
+      - op6sp/options.tcl : {file_type : tclSource}
+
   arty_a7_35t:
     files: [arty_a7_35t/blinky.xdc : {file_type : xdc}]
 
@@ -190,6 +195,18 @@ targets:
         device  : xc3s200a
         package : ft256
         speed   : -5
+    toplevel : blinky
+
+  op6sp:
+    default_tool : ise
+    filesets : [rtl, op6sp]
+    parameters : [clk_freq_hz=99000000]
+    tools:
+      ise:
+        family  : Spartan6
+        device  : xc6slx9
+        package : csg225
+        speed   : -2
     toplevel : blinky
 
   arty_a7_35t:
