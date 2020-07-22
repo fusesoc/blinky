@@ -1,35 +1,116 @@
 CAPI=2:
-name : fusesoc:utils:blinky:0
+name : fusesoc:utils:blinky:1.0
 
 filesets:
+  alhambra_II:
+    files: [alhambra_II/pinout.pcf : {file_type : PCF}]
+
+  AnalogMax:
+    files:
+      - AnalogMax/AnalogMax.sdc : {file_type : SDC}
+      - AnalogMax/pinmap.tcl  : {file_type: tclSource}
+
   apf27:
     files:
       - apf27/blinky.ucf :  {file_type : UCF}
       - apf27/options.tcl : {file_type : tclSource}
+
+  arty_a7_35t:
+    files: [arty_a7_35t/blinky.xdc : {file_type : xdc}]
+
+  colorlight_5a75b:
+    files: [colorlight_5a75b/blinky.lpf : {file_type : LPF}]
 
   cyc1000:
     files:
       - cyc1000/cyc1000.sdc : {file_type : SDC}
       - cyc1000/pinmap.tcl  : {file_type: tclSource}
 
+  cisco-hwic-3g-cdma:
+    files:
+      - cisco-hwic-3g-cdma/cisco-hwic-3g-cdma.sdc : {file_type : SDC}
+      - cisco-hwic-3g-cdma/pinmap.tcl  : {file_type: tclSource}
+
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
       - de0_nano/pinmap.tcl   : {file_type: tclSource}
 
+  de0_nanosoc:
+    files:
+      - de0_nanosoc/de0_nanosoc.sdc  : {file_type : SDC}
+      - de0_nanosoc/pinmap.tcl       : {file_type : tclSource}
+
+  de10_soc:
+    files:
+      - de10_soc/de10_soc.sdc : {file_type : SDC}
+      - de10_soc/pinmap.tcl  : {file_type : tclSource}
+
+  soc_kit:
+    files:
+      - soc_kit/soc_kit.sdc : {file_type : SDC}
+      - soc_kit/pinmap.tcl  : {file_type : tclSource}
+
+  de1_soc_revF:
+    files:
+      - de1_soc_revF/de1_soc_revF.sdc : {file_type : SDC}
+      - de1_soc_revF/pinmap.tcl       : {file_type : tclSource}
+
+  ecp5_evn:
+    files: [ecp5_evn/blinky.lpf : {file_type : LPF}]
+
+  ice40hx1k_evb:
+    files: [ice40hx1k_evb/pinout.pcf : {file_type : PCF}]
+
+  ice40-hx8k_breakout:
+    files: [ice40-hx8k_breakout/pinout.pcf : {file_type : PCF}]
+
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
+  kcu1500:
+    files:
+      - kcu1500/blinky_kcu1500.v : {file_type : verilogSource}
+      - kcu1500/blinky.xdc : {file_type : xdc}
+
+  machXO2_breakout:
+    files:
+      - machXO2_breakout/blinky.lpf : {file_type : LPF}
+      - machXO2_breakout/blinky_machXO2_breakout.v : {file_type : verilogSource}
+
+  machXO3_breakout:
+    files: [machXO3_breakout/blinky.lpf : {file_type : LPF}]
+
+  max1000:
+    files:
+      - max1000/max1000.sdc : {file_type : SDC}
+      - max1000/pinmap.tcl  : {file_type: tclSource}
+
+  mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
+
   nexys_a7: {files: [nexys_a7/blinky.xdc : {file_type : xdc}]}
+
+  nexys_video: {files: [nexys_video/blinky.xdc : {file_type : xdc}]}
 
   opos6ul_sp:
     files: [opos6ul_sp/blinky.ucf : {file_type : UCF}]
+
+  pipistrello:
+    files: [pipistrello/blinky.ucf : {file_type : UCF}]
 
   rtl:
     files: [blinky.v : {file_type : verilogSource}]
 
   proginfo:
     files: [sw/proginfo.py : {file_type : user, copyto : proginfo.py}]
+
+  pynq_z2:
+    files:
+      - pynq_z2/blinky_pynq_z2.v : {file_type : verilogSource}
+      - pynq_z2/blinky.xdc : {file_type : xdc}
+
+  spartan_edge_accelerator_board:
+    files: [spartan_edge_accelerator_board/blinky.xdc : {file_type : xdc}]
 
   tb:
     files: [blinky_tb.v : {file_type : verilogSource}]
@@ -40,18 +121,64 @@ filesets:
 
   ulx3s:
     files:
-      - ulx3s/ulx3s_empty.config : {file_type : user, copyto : ulx3s_empty.config}
       - ulx3s/ulx3s_v20.lpf : {file_type : LPF, copyto : ulx3s_v20.lpf}
+      - ulx3s/blinky_ulx3s.v : {file_type : verilogSource}
 
   upduino2:
     files:
       - upduino2/blinky_upduino2.v : {file_type : verilogSource}
       - upduino2/pinout.pcf : {file_type : PCF}
 
+  xc6sl9_hseda_eda6.1:
+    files: [xc6sl9_hseda_eda6.1/blinky.ucf : {file_type : UCF}]
+
+  zcu102:
+    files:
+      - zcu102/blinky_zcu102.v : {file_type : verilogSource}
+      - zcu102/blinky.xdc : {file_type : xdc}
+
+  zcu106:
+    files:
+      - zcu106/blinky_zcu106.v : {file_type : verilogSource}
+      - zcu106/blinky.xdc : {file_type : xdc}
+
+  zrtech_v2:
+    files:
+      - zrtech_v2/zrtech_v2.sdc : {file_type : SDC}
+      - zrtech_v2/pinmap.tcl    : {file_type: tclSource}
+
+  zybo_z7:
+    files:
+      - zybo_z7/blinky_zybo_z7.v : {file_type : verilogSource}
+      - zybo_z7/blinky.xdc : {file_type : xdc}
+
 targets:
   default: &default
     filesets : [rtl]
     toplevel: ["is_toplevel? (blinky)"]
+
+  alhambra_II:
+    default_tool : icestorm
+    description : Alhambra II iCE40-HX4K based open-source hardware board
+    hooks:
+      post_run: [iceprog]
+    filesets : [rtl, proginfo, alhambra_II]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx8k, --package, "tq144:4k"]
+        pnr : next
+    toplevel : blinky
+
+  AnalogMax:
+    default_tool : quartus
+    filesets : [rtl, AnalogMax]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      quartus:
+        family : MAX 10
+        device : 10M08SAU169C8G
+    toplevel: blinky
 
   apf27:
     default_tool : ise
@@ -65,6 +192,24 @@ targets:
         speed   : -5
     toplevel : blinky
 
+  arty_a7_35t:
+    default_tool : vivado
+    filesets : [rtl, arty_a7_35t]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7a35ticsg324-1L
+    toplevel : blinky
+
+  colorlight_5a75b:
+    default_tool : trellis
+    filesets : [rtl, colorlight_5a75b]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      trellis:
+        nextpnr_options : [--25k --package CABGA256 --speed 6 --freq 65]
+    toplevel : blinky
+
   cyc1000:
     <<: *default
     default_tool : quartus
@@ -75,6 +220,16 @@ targets:
         family : Cyclone 10 LP
         device : 10CL025YU256C8G
 
+  cisco-hwic-3g-cdma:
+    <<: *default
+    default_tool : quartus
+    filesets_append : [cisco-hwic-3g-cdma]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      quartus:
+        family : Cyclone II
+        device : EP2C35F484C8
+
   de0_nano:
     default_tool : quartus
     filesets : [rtl, de0_nano]
@@ -84,6 +239,82 @@ targets:
         family : Cyclone IV E
         device : EP4CE22F17C6
     toplevel: blinky
+
+  de0_nanosoc:
+    default_tool : quartus
+    filesets : [rtl, de0_nanosoc]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSEMA4U23C6
+        board_device_index : 2
+    toplevel: blinky
+
+  de1_soc_revF:
+    default_tool : quartus
+    filesets : [rtl, de1_soc_revF]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSEMA5F31C6
+        board_device_index : 2
+    toplevel: blinky
+
+  de10_soc:
+    default_tool : quartus
+    filesets : [rtl, de10_soc]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSXFC6D6F31C6
+        cable : "DE-SoC"
+        board_device_index : 2
+    toplevel: blinky
+
+  ecp5_evn:
+    default_tool : trellis
+    description : ECP5 Evaluation Board
+    filesets : [rtl, ecp5_evn]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      trellis:
+        nextpnr_options : [--um5g-85k --package CABGA381]
+    toplevel : blinky
+
+  soc_kit:
+    default_tool : quartus
+    filesets : [rtl, soc_kit]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSXFC6D6F31C6
+        board_device_index : 2
+        cable : "USB-BlasterII"  # Is sufficient
+    toplevel: blinky
+
+  ice40hx1k_evb:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, ice40hx1k_evb]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx1k, --package, vq100]
+        pnr : next
+    toplevel : blinky
+
+  ice40-hx8k_breakout:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, ice40-hx8k_breakout]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx8k, --package, ct256]
+        pnr : next
+    toplevel : blinky
 
   lx9_microboard:
     default_tool : ise
@@ -97,6 +328,51 @@ targets:
         speed   : -2
     toplevel : blinky
 
+  kcu1500:
+    default_tool: vivado
+    description : Kintex UltraScale KCU1500 Acceleration Development Kit
+    filesets : [rtl, kcu1500]
+    tools:
+      vivado:
+        part : xcku115-flvb2104-2-e
+    toplevel : blinky_kcu1500
+
+  machXO2_breakout:
+    default_tool : diamond
+    description : MachXO2 Breakout Board Evaluation Kit
+    filesets : [rtl, machXO2_breakout]
+    tools:
+      diamond: {part: LCMXO2-7000HE-4TG144C}
+    toplevel : blinky_machXO2_breakout
+
+  machXO3_breakout:
+    default_tool : diamond
+    description : Lattice MachXO3LF Starter Kit LCMX03LF-6900C
+    filesets : [rtl, machXO3_breakout]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      diamond: {part: LCMXO3LF-6900C-5BG256C}
+    toplevel : blinky
+
+  max1000:
+    <<: *default
+    default_tool : quartus
+    filesets_append : [max1000]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      quartus:
+        family : MAX 10
+        device : 10M08SAU169C8G
+
+  mini_s7:
+    default_tool: vivado
+    filesets : [rtl, mini_s7]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7s25ftgb196-1
+    toplevel : blinky
+
   nexys_a7:
     default_tool: vivado
     filesets : [rtl, nexys_a7]
@@ -104,6 +380,15 @@ targets:
     tools:
       vivado:
         part : xc7a100tcsg324-1
+    toplevel : blinky
+
+  nexys_video:
+    default_tool: vivado
+    filesets : [rtl, nexys_video]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7a200tsbg484-1
     toplevel : blinky
 
   opos6ul_sp:
@@ -118,6 +403,27 @@ targets:
         speed   : -2
     toplevel : blinky
 
+  pipistrello:
+    default_tool : ise
+    filesets : [rtl, pipistrello]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan6
+        device  : xc6slx45
+        package : csg324
+        speed   : -3
+    toplevel : blinky
+
+  pynq_z2:
+    default_tool: vivado
+    description : Pynq-Z2 Zynq Z7020 Evaluation Kit
+    filesets : [rtl, pynq_z2]
+    tools:
+      vivado:
+        part : xc7z020clg400-1
+    toplevel : blinky_pynq_z2
+
   sim:
     default_tool: icarus
     filesets : [rtl, tb]
@@ -128,6 +434,16 @@ targets:
       xsim:
         xelab_options: [--timescale, 1ns/1ns]
     toplevel: blinky_tb
+
+  spartan_edge_accelerator_board:
+    default_tool : vivado
+    description : Spartan Edge Accelerator Board
+    filesets : [rtl, spartan_edge_accelerator_board]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7s15ftgb196-1
+    toplevel : blinky
 
   tinyfpga_bx:
     default_tool : icestorm
@@ -141,14 +457,25 @@ targets:
         pnr: next
     toplevel : blinky
 
-  ulx3s:
+  ulx3s_45: &ulx3s
     default_tool : trellis
+    description : Radiona ULX3S board with 45k FPGA
     filesets : [rtl, proginfo, ulx3s]
-    parameters : [clk_freq_hz=25000000]
+    hooks:
+      post_run: [ujprog]
     tools:
+      diamond: {part: LFE5U-45F-6BG381C}
       trellis:
-        nextpnr_options : [--45k --basecfg ulx3s_empty.config --lpf ulx3s_v20.lpf]
-    toplevel : blinky
+        nextpnr_options : [--package, CABGA381, --45k, --lpf, ulx3s_v20.lpf]
+    toplevel : blinky_ulx3s
+
+  ulx3s_85:
+    <<: *ulx3s
+    description : Radiona ULX3S board with 85k FPGA
+    tools:
+      diamond: {part: LFE5U-85F-6BG381C}
+      trellis:
+        nextpnr_options : [--package, CABGA381, --85k, --lpf, ulx3s_v20.lpf]
 
   upduino2:
     default_tool : icestorm
@@ -161,6 +488,62 @@ targets:
         pnr: next
     toplevel : blinky_upduino2
 
+  xc6sl9_hseda_eda6.1:
+    default_tool : ise
+    filesets : [rtl, xc6sl9_hseda_eda6.1]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan6
+        device  : xc6slx9
+        package : tqg144
+        speed   : -2
+    toplevel : blinky
+
+  zcu102:
+    default_tool: vivado
+    description : Zynq UltraScale+ MPSoC ZCU102 Evaluation Kit
+    filesets : [rtl, zcu102]
+    tools:
+      vivado:
+        part : xczu9eg-ffvb1156-2-e
+    toplevel : blinky_zcu102
+
+  zcu106:
+    default_tool: vivado
+    description : Zynq UltraScale+ MPSoC ZCU106 Evaluation Kit
+    filesets : [rtl, zcu106]
+    tools:
+      vivado:
+        part : xczu7ev-ffvc1156-2-e
+    toplevel : blinky_zcu106
+
+  zrtech_v2:
+    default_tool : quartus
+    filesets : [rtl, zrtech_v2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone IV E
+        device : EP4CE6E22C8
+    toplevel: blinky
+
+  zybo_z7-10: &zybo_z7
+    default_tool: vivado
+    description : Digilent Zybo Z7-10 SoC Kit
+    filesets : [rtl, zybo_z7]
+    tools:
+      vivado:
+        part : xc7z010clg400-1
+    toplevel : blinky_zybo_z7
+
+  zybo_z7-20:
+    <<: *zybo_z7
+    description : Digilent Zybo Z7-20 SoC Kit
+    tools:
+      vivado:
+        part : xc7z020clg400-1
+        
 parameters:
   clk_freq_hz:
     datatype    : int
@@ -173,6 +556,8 @@ parameters:
 
 scripts:
   iceprog:
-    cmd : [python, proginfo.py, iceprog]
+    cmd : [python3, proginfo.py, iceprog]
   tinyprog:
-    cmd : [python, proginfo.py, tinyprog]
+    cmd : [python3, proginfo.py, tinyprog]
+  ujprog:
+    cmd : [python3, proginfo.py, ujprog]

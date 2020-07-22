@@ -1,0 +1,2 @@
+set_io clk J3
+set_io q B5
