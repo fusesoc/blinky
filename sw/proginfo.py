@@ -13,3 +13,5 @@ elif sys.argv[1] == 'iceprog':
 elif sys.argv[1] == 'ujprog':
     print("ujprog {}".format(os.path.join(os.getcwd(), "Implementation0", system_name+"_Implementation0.bit")))
     print("Other programming options are listed here https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md#programming-options")
+elif sys.argv[1] == 'dfu-util':
+    print("dfu-util -d 1209:5af0 -D {}".format(os.path.join(os.getcwd(), system_name+".bit")))
