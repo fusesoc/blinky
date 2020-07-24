@@ -95,6 +95,11 @@ filesets:
   opos6ul_sp:
     files: [opos6ul_sp/blinky.ucf : {file_type : UCF}]
 
+  orangecrab:
+    files:
+      - orangecrab/orangecrab_r02.lpf : {file_type : LPF, copyto : orangecrab_r02.lpf}
+      - orangecrab/blinky_orangecrab.v : {file_type : verilogSource}
+
   pipistrello:
     files: [pipistrello/blinky.ucf : {file_type : UCF}]
 
@@ -402,6 +407,15 @@ targets:
         package : csg225
         speed   : -2
     toplevel : blinky
+
+  orangecrab_r0.2: &orangecrab
+    default_tool : trellis
+    description : OrangeCrab R0.2
+    filesets : [rtl, orangecrab]
+    tools:
+      trellis:
+        nextpnr_options : [--package, CSFBGA285, --25k, --lpf, orangecrab_r02.lpf]
+    toplevel : blinky_orangecrab
 
   pipistrello:
     default_tool : ise
