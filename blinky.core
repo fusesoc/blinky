@@ -97,7 +97,7 @@ filesets:
 
   orangecrab:
     files:
-      - orangecrab/orangecrab_r02.lpf : {file_type : LPF, copyto : orangecrab_r02.lpf}
+      - orangecrab/orangecrab_r02.lpf : {file_type : LPF}
       - orangecrab/blinky_orangecrab.v : {file_type : verilogSource}
 
   pipistrello:
@@ -411,10 +411,12 @@ targets:
   orangecrab_r0.2: &orangecrab
     default_tool : trellis
     description : OrangeCrab R0.2
-    filesets : [rtl, orangecrab]
+    filesets : [rtl, proginfo, orangecrab]
+    hooks:
+      post_run: [dfu-util]
     tools:
       trellis:
-        nextpnr_options : [--package, CSFBGA285, --25k, --lpf, orangecrab_r02.lpf]
+        nextpnr_options : [--package, CSFBGA285, --25k]
     toplevel : blinky_orangecrab
 
   pipistrello:
@@ -575,3 +577,5 @@ scripts:
     cmd : [python3, proginfo.py, tinyprog]
   ujprog:
     cmd : [python3, proginfo.py, ujprog]
+  dfu-util:
+    cmd : [python3, proginfo.py, dfu-util]
