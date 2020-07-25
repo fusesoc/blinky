@@ -95,6 +95,11 @@ filesets:
   opos6ul_sp:
     files: [opos6ul_sp/blinky.ucf : {file_type : UCF}]
 
+  orangecrab:
+    files:
+      - orangecrab/orangecrab_r02.lpf : {file_type : LPF}
+      - orangecrab/blinky_orangecrab.v : {file_type : verilogSource}
+
   pipistrello:
     files: [pipistrello/blinky.ucf : {file_type : UCF}]
 
@@ -403,6 +408,17 @@ targets:
         speed   : -2
     toplevel : blinky
 
+  orangecrab_r0.2: &orangecrab
+    default_tool : trellis
+    description : OrangeCrab R0.2
+    filesets : [rtl, proginfo, orangecrab]
+    hooks:
+      post_run: [dfu-util]
+    tools:
+      trellis:
+        nextpnr_options : [--package, CSFBGA285, --25k]
+    toplevel : blinky_orangecrab
+
   pipistrello:
     default_tool : ise
     filesets : [rtl, pipistrello]
@@ -561,3 +577,5 @@ scripts:
     cmd : [python3, proginfo.py, tinyprog]
   ujprog:
     cmd : [python3, proginfo.py, ujprog]
+  dfu-util:
+    cmd : [python3, proginfo.py, dfu-util]
