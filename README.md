@@ -16,7 +16,7 @@ To check if it's available run `fusesoc core list` and check for a core called `
 
 If it's not there, try to run `fusesoc library update` to refresh the core libraries and look again.
 
-If it's still not there, or if you want to modify the project, e.g. to add support for an additional board, you can add LED to believe as a new core library with `fusesoc library add blinky git clone https://github.com/fusesoc/blinky`. LED to believe will now be added as a new library and downloaded to `fusesoc_libraries/blinky`
+If it's still not there, or if you want to modify the project, e.g. to add support for an additional board, you can add LED to believe as a new core library with `fusesoc library add blinky https://github.com/fusesoc/blinky`. LED to believe will now be added as a new library and downloaded to `fusesoc_libraries/blinky`
 
 To build for your particular board, run `fusesoc run --target=<board> fusesoc:utils:blinky` where `<board>` is one of the boards listed in the Board support section below.
 
