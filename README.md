@@ -52,6 +52,10 @@ https://www.arrow.com/en/products/tei0001-03-16-c8/trenz-electronic-gmbh
 
 http://www.armadeus.org/wiki/index.php?title=APF27
 
+### afp51
+
+http://www.armadeus.org/wiki/index.php?title=APF51
+
 ### Alhambra II
 
 https://alhambrabits.com/alhambra/
