@@ -101,7 +101,9 @@ filesets:
   nexys_video: {files: [nexys_video/blinky.xdc : {file_type : xdc}]}
 
   opos6ul_sp:
-    files: [opos6ul_sp/blinky.ucf : {file_type : UCF}]
+    files:
+      - opos6ul_sp/blinky.ucf : {file_type : UCF}
+      - opos6ul_sp/options.tcl : {file_type : tclSource}
 
   orangecrab:
     files:
