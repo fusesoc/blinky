@@ -21,6 +21,9 @@ filesets:
   colorlight_5a75b:
     files: [colorlight_5a75b/blinky.lpf : {file_type : LPF}]
 
+  crosslink_nx_evn:
+    files: [crosslink_nx_evn/blinky.pdc : {file_type : PDC}]
+
   cyc1000:
     files:
       - cyc1000/cyc1000.sdc : {file_type : SDC}
@@ -213,6 +216,15 @@ targets:
     tools:
       trellis:
         nextpnr_options : [--25k --package CABGA256 --speed 6 --freq 65]
+    toplevel : blinky
+
+  crosslink_nx_evn:
+    default_tool : radiant
+    description : CrossLink NX Evaluation Board
+    filesets : [rtl, crosslink_nx_evn]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      radiant : {part: LIFCL-40-9BG400C}
     toplevel : blinky
 
   cyc1000:
