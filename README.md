@@ -64,6 +64,10 @@ https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-
 
 https://fr.aliexpress.com/item/32281130824.html
 
+### crosslink_nx_evn
+
+https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/CrossLink-NXEvaluationBoard
+
 ### cyc1000
 
 https://shop.trenz-electronic.de/en/TEI0003-02-CYC1000-with-Cyclone-10-FPGA-8-MByte-SDRAM

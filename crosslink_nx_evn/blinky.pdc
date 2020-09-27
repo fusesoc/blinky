@@ -1,0 +1,6 @@
+ldc_set_location -site {L13} [get_ports clk]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33 PULLMODE=NONE} [get_ports clk]
+ldc_set_location -site {E17} [get_ports q]
+ldc_set_port -iobuf {IO_TYPE=LVCMOS33} [get_ports q]
+
+ldc_set_sysconfig {CONFIG_MODE=SPI_SERIAL MCCLK_FREQ=3.5}
