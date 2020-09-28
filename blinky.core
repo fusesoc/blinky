@@ -16,7 +16,7 @@ filesets:
       - apf27/options.tcl : {file_type : tclSource}
 
   apf51:
-    files: 
+    files:
       - apf51/blinky.ucf : {file_type : UCF}
       - apf51/options.tcl : {file_type : tclSource}
 
@@ -51,6 +51,11 @@ filesets:
     files:
       - de0_nanosoc/de0_nanosoc.sdc  : {file_type : SDC}
       - de0_nanosoc/pinmap.tcl       : {file_type : tclSource}
+
+  de5_net:
+    files:
+      - de5_net/de5_net.sdc : {file_type : SDC}
+      - de5_net/pinmap.tcl  : {file_type: tclSource}
 
   de10_soc:
     files:
@@ -320,6 +325,16 @@ targets:
         device : 5CSXFC6D6F31C6
         cable : "DE-SoC"
         board_device_index : 2
+    toplevel: blinky
+
+  de5_net:
+    default_tool : quartus
+    filesets : [rtl, de5_net]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Stratix V
+        device : 5SGXEA7N2F45C2
     toplevel: blinky
 
   ecp5_evn:
