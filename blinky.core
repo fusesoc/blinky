@@ -2,6 +2,11 @@ CAPI=2:
 name : fusesoc:utils:blinky:1.0
 
 filesets:
+  ac701:
+    files:
+      - ac701/blinky_ac701.v : {file_type : verilogSource}
+      - ac701/blinky.xdc : {file_type : xdc}
+
   alhambra_II:
     files: [alhambra_II/pinout.pcf : {file_type : PCF}]
 
@@ -179,6 +184,15 @@ targets:
   default: &default
     filesets : [rtl]
     toplevel: ["is_toplevel? (blinky)"]
+
+  ac701:
+    default_tool: vivado
+    description : Xilinx Artix-7 FPGA AC701 Evaluation Kit
+    filesets : [rtl, ac701]
+    tools:
+      vivado:
+        part : xc7a200t-fbg676-2
+    toplevel : blinky_ac701
 
   alhambra_II:
     default_tool : icestorm

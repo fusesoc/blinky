@@ -44,6 +44,10 @@ Board support
 
 The following boards are currently supported:
 
+### AC701
+
+https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html
+
 ### AnalogMax
 
 https://www.arrow.com/en/products/tei0001-03-16-c8/trenz-electronic-gmbh
