@@ -1,0 +1,5 @@
+# 12 MHz clock input
+set_io clk 	21
+
+# Onboard LED (Green)
+set_io q 	95
