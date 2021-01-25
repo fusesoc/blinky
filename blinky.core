@@ -50,6 +50,11 @@ filesets:
       - cisco-hwic-3g-cdma/cisco-hwic-3g-cdma.sdc : {file_type : SDC}
       - cisco-hwic-3g-cdma/pinmap.tcl  : {file_type: tclSource}
 
+  sockit:
+    files:
+      - sockit/sockit.sdc : {file_type : SDC}
+      - sockit/pinmap.tcl   : {file_type: tclSource}
+      
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -324,6 +329,17 @@ targets:
       quartus:
         family : Cyclone II
         device : EP2C35F484C8
+
+  sockit:
+    default_tool : quartus
+    description : Arrow Sockit Development kit by Terasic with 284 cores + SERV emitter
+    filesets : [rtl, sockit]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V 
+        device : 5CSXFC6D6F31C6
+    toplevel: blinky
 
   de0_nano:
     default_tool : quartus
