@@ -104,6 +104,15 @@ https://www.olimex.com/wiki/ICE40HX1K-EVB
 
 http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx
 
+
+### iceFUN
+
+https://www.robot-electronics.co.uk/products/fpga/icefun.html
+
+### iceWerx
+
+https://www.robot-electronics.co.uk/icewerx.html
+
 ### lx9_microboard
 
 https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g-3074457345628965461/
