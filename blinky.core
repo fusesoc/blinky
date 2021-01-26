@@ -97,6 +97,14 @@ filesets:
   ice40-hx8k_breakout:
     files: [ice40-hx8k_breakout/pinout.pcf : {file_type : PCF}]
 
+  iceFUN:
+    files:
+      - iceFUN/blinky.v : {file_type : verilogSource}  
+      - iceFUN/iceFUN.pcf : {file_type : PCF}
+     
+  iceWerx:
+    files: [iceWerx/pinout.pcf : {file_type : PCF}]   
+
   lx9_microboard:
     files: [lx9_microboard/blinky.ucf : {file_type : UCF}]
 
@@ -431,6 +439,26 @@ targets:
         nextpnr_options : [--hx8k, --package, ct256]
         pnr : next
     toplevel : blinky
+
+  iceFUN:
+    default_tool : icestorm
+    filesets : [iceFUN]
+    tools:
+       icestorm:
+        nextpnr_options : [--hx8k, --package, cb132]
+        pnr : next
+    toplevel : top
+        
+  iceWerx:
+    default_tool : icestorm
+    filesets : [rtl,iceWerx]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx8k, --package, cb132]
+        pnr : next
+    toplevel : blinky
+
 
   lx9_microboard:
     default_tool : ise
