@@ -681,8 +681,8 @@ targets:
     description : Microsemi Polarfire Evaluation Kit
     filesets : [rtl, polarfireeval]
     tools:
-      libero:
-        family : Polarfire
+      libero: &liberoMPF300
+        family : PolarFire
         die : MPF300TS
         package : FCG1152
     toplevel : blinky_polarfireeval
@@ -692,6 +692,7 @@ targets:
     description : Microsemi Polarfire Evaluation Kit (ES)
     tools:
       libero:
+        <<: *liberoMPF300
         die : MPF300TS_ES
 
 parameters:

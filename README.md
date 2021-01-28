@@ -124,6 +124,10 @@ https://www.latticesemi.com/products/developmentboardsandkits/machxo3lfstarterki
 
 https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KLE-8-MByte-RAM
 
+### Microsemi Polarfire Evaluation Kit
+
+https://www.microsemi.com/existing-parts/parts/150789
+
 ### nexys_a7
 
 https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum
