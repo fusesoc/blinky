@@ -153,6 +153,10 @@ http://pipistrello.saanlima.com/index.php?title=Welcome_to_Pipistrello
 
 https://shop.trenz-electronic.de/en/TE0890-01-25-1C-S7-Mini-Fully-Open-Source-Module-with-Xilinx-Spartan-7-7S25-64-MBit-HyperRAM
 
+### SoCKit Development Kit
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=167&No=816
+
 ### spartan_edge_accelerator_board
 
 https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/
