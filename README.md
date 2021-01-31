@@ -96,6 +96,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=1
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard
 
+### FPC-III
+
+https://repo.or.cz/fpc-iii.git
+
 ### ice40hx1k_evb
 
 https://www.olimex.com/wiki/ICE40HX1K-EVB
