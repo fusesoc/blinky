@@ -159,6 +159,11 @@ filesets:
   spartan_edge_accelerator_board:
     files: [spartan_edge_accelerator_board/blinky.xdc : {file_type : xdc}]
 
+  tang_nano:
+    files: 
+      - tang_nano/blinky.v : {file_type : verilogSource}
+      - tang_nano/tangnano.cst : {file_type : CST} 
+
   tb:
     files: [blinky_tb.v : {file_type : verilogSource}]
     depend: [vlog_tb_utils]
@@ -599,7 +604,15 @@ targets:
       vivado:
         part : xc7s15ftgb196-1
     toplevel : blinky
-
+    
+  tang_nano:
+    default_tool: apicula
+    filesets: [tang_nano]
+    tools:
+      apicula:
+        device: GW1N-LV1QN48C6/I5
+    toplevel: top  
+  
   tinyfpga_bx:
     default_tool : icestorm
     filesets : [rtl, proginfo, tinyfpga_bx]

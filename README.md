@@ -157,6 +157,10 @@ https://shop.trenz-electronic.de/en/TE0890-01-25-1C-S7-Mini-Fully-Open-Source-Mo
 
 https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/
 
+### tang_nano
+
+https://tangnano.sipeed.com/en/
+
 ### tinyfpga_bx
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
