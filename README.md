@@ -92,6 +92,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=165&No=836
 
+### DECA
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=&No=944&PartNo=1
+
 ### ecp5_evn
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard

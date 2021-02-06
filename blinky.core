@@ -55,6 +55,11 @@ filesets:
       - sockit/sockit.sdc : {file_type : SDC}
       - sockit/pinmap.tcl   : {file_type: tclSource}
       
+  deca:
+    files:
+      - deca/deca.sdc : {file_type : SDC}
+      - deca/pinmap.tcl   : {file_type: tclSource}
+      
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -340,7 +345,7 @@ targets:
 
   sockit:
     default_tool : quartus
-    description : Arrow Sockit Development kit by Terasic with 284 cores + SERV emitter
+    description : Arrow Sockit Development kit by Terasic 
     filesets : [rtl, sockit]
     parameters : [clk_freq_hz=50000000]
     tools:
@@ -349,6 +354,17 @@ targets:
         device : 5CSXFC6D6F31C6
     toplevel: blinky
 
+  deca:
+    default_tool : quartus
+    description : DECA Development kit by Terasic 
+    filesets : [rtl, deca]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Max 10 
+        device : 10M50DAF484C6GES
+    toplevel: blinky
+    
   de0_nano:
     default_tool : quartus
     filesets : [rtl, de0_nano]
