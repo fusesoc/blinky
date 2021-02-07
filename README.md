@@ -165,6 +165,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=1
 
 https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/
 
+### tang_nano
+
+https://tangnano.sipeed.com/en/
+
 ### tinyfpga_bx
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
