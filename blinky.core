@@ -50,6 +50,11 @@ filesets:
       - cisco-hwic-3g-cdma/cisco-hwic-3g-cdma.sdc : {file_type : SDC}
       - cisco-hwic-3g-cdma/pinmap.tcl  : {file_type: tclSource}
 
+  core_ep4ce10:
+    files:
+      - core_ep4ce10/core_ep4ce10.sdc : {file_type : SDC}
+      - core_ep4ce10/pinmap.tcl   : {file_type: tclSource}
+
   sockit:
     files:
       - sockit/sockit.sdc : {file_type : SDC}
@@ -347,6 +352,16 @@ targets:
       quartus:
         family : Cyclone II
         device : EP2C35F484C8
+
+  core_ep4ce10:
+    default_tool : quartus
+    filesets : [rtl, core_ep4ce10]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone IV E
+        device : EP4CE10F17C8
+    toplevel: blinky
 
   sockit:
     default_tool : quartus
