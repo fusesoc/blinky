@@ -110,6 +110,9 @@ filesets:
   ice40-hx8k_breakout:
     files: [ice40-hx8k_breakout/pinout.pcf : {file_type : PCF}]
 
+  icebreaker:
+    files: [icebreaker/pinout.pcf : {file_type : PCF}]
+
   iceFUN:
     files:
       - iceFUN/blinky.v : {file_type : verilogSource}  
@@ -488,6 +491,16 @@ targets:
       icestorm:
         nextpnr_options : [--hx8k, --package, ct256]
         pnr : next
+    toplevel : blinky
+  
+  icebreaker:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, icebreaker]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options: [--up5k, --freq, 16]
+        pnr: next
     toplevel : blinky
 
   iceFUN:
