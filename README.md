@@ -118,6 +118,9 @@ https://www.olimex.com/wiki/ICE40HX1K-EVB
 
 http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx
 
+### iCEBreaker FPGA
+
+https://www.crowdsupply.com/1bitsquared/icebreaker-fpga
 
 ### iceFUN
 
