@@ -34,6 +34,9 @@ filesets:
   arty_z7_20:
     files: [arty_z7_20/blinky.xdc : {file_type : xdc}]
 
+  basys3:
+    files: [basys3/blinky.xdc : {file_type : xdc}]
+
   colorlight_5a75b:
     files: [colorlight_5a75b/blinky.lpf : {file_type : LPF}]
 
@@ -303,6 +306,15 @@ targets:
     tools:
       vivado:
         part : xc7z020clg400-1
+    toplevel : blinky
+
+  basys3:
+    default_tool : vivado
+    filesets : [rtl, basys3]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7a35tcpg236-1
     toplevel : blinky
 
   colorlight_5a75b:
