@@ -70,6 +70,10 @@ https://alhambrabits.com/alhambra/
 
 https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
 
+### basys3
+
+https://store.digilentinc.com/basys-3-artix-7-fpga-beginner-board-recommended-for-introductory-users/
+
 ### colorlight_5a75b
 
 https://fr.aliexpress.com/item/32281130824.html
