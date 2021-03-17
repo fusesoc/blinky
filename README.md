@@ -1,6 +1,8 @@
 LED to believe
 ==============
 
+[![LibreCores](https://www.librecores.org/olofk/led-to-believe/badge.svg?style=flat)](https://www.librecores.org/olofk/led-to-believe)
+
 This project aims to provide LED blinking examples for all the FPGA dev boards in the world.
 
 The goal is to provide a quick way to test your new FPGA board and get acquainted with using [FuseSoC](https://github.com/olofk/fusesoc) in your design flow.
