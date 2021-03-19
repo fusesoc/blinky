@@ -217,6 +217,11 @@ filesets:
       - zybo_z7/blinky_zybo_z7.v : {file_type : verilogSource}
       - zybo_z7/blinky.xdc : {file_type : xdc}
 
+  polarfireeval:
+    files:
+      - polarfireeval/blinky_polarfireeval.v : {file_type : verilogSource}
+      - polarfireeval/polarfireeval.pdc : {file_type : PDC}
+
 targets:
   default: &default
     filesets : [rtl]
@@ -756,6 +761,25 @@ targets:
     tools:
       vivado:
         part : xc7z020clg400-1
+
+  polarfireeval: &polarfireeval
+    default_tool: libero
+    description : Microsemi Polarfire Evaluation Kit
+    filesets : [rtl, polarfireeval]
+    tools:
+      libero: &liberoMPF300
+        family : PolarFire
+        die : MPF300TS
+        package : FCG1152
+    toplevel : blinky_polarfireeval
+
+  polarfireeval_es:
+    <<: *polarfireeval
+    description : Microsemi Polarfire Evaluation Kit (ES)
+    tools:
+      libero:
+        <<: *liberoMPF300
+        die : MPF300TS_ES
 
 parameters:
   clk_freq_hz:
