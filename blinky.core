@@ -160,6 +160,8 @@ filesets:
 
   mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
 
+  nexys_4: {files: [nexys_4/blinky.xdc : {file_type : xdc}]}
+
   nexys_a7: {files: [nexys_a7/blinky.xdc : {file_type : xdc}]}
 
   nexys_video: {files: [nexys_video/blinky.xdc : {file_type : xdc}]}
@@ -654,6 +656,15 @@ targets:
     tools:
       vivado:
         part : xc7s25ftgb196-1
+    toplevel : blinky
+
+  nexys_4:
+    default_tool: vivado
+    filesets : [rtl, nexys_4]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7a100tcsg324-1
     toplevel : blinky
 
   nexys_a7:
