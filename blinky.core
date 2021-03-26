@@ -37,6 +37,11 @@ filesets:
   basys3:
     files: [basys3/blinky.xdc : {file_type : xdc}]
 
+  c10lp_refkit:
+    files:
+      - c10lp_refkit/c10lp_refkit.sdc : {file_type: SDC}
+      - c10lp_refkit/pinmap.tcl       : {file_type: tclSource}
+
   colorlight_5a75b:
     files: [colorlight_5a75b/blinky.lpf : {file_type : LPF}]
 
@@ -329,6 +334,17 @@ targets:
       vivado:
         part : xc7a35tcpg236-1
     toplevel : blinky
+
+  c10lp_refkit:
+    <<: *default
+    default_tool : quartus
+    description : Cyclone 10 LP RefKit 10CL055 Development Board
+    filesets_append : [c10lp_refkit]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      quartus:
+        family : Cyclone 10 LP
+        device : 10CL055YU484C8G
 
   colorlight_5a75b:
     default_tool : trellis
