@@ -88,7 +88,7 @@ https://shop.trenz-electronic.de/en/TEI0003-02-CYC1000-with-Cyclone-10-FPGA-8-MB
 
 ## Cisco HWIC-3G-CDMA
 
-https://https://github.com/tomverbeure/cisco-hwic-3g-cdma
+https://github.com/tomverbeure/cisco-hwic-3g-cdma
 
 ## Waveshare CoreEP4CE10
 
