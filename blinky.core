@@ -238,6 +238,10 @@ filesets:
       - polarfireeval/blinky_polarfireeval.v : {file_type : verilogSource}
       - polarfireeval/polarfireeval.pdc : {file_type : PDC}
 
+  eclypse_z7:
+    files:
+      - eclypse_z7/blinky.xdc : {file_type : xdc}
+
 targets:
   default: &default
     filesets : [rtl]
@@ -838,6 +842,16 @@ targets:
       libero:
         <<: *liberoMPF300
         die : MPF300TS_ES
+
+  eclypse_z7:
+    default_tool : vivado
+    description : Digilent Eclypse Z7 SoC Kit SYZYGY-compatible
+    filesets : [rtl, eclypse_z7]
+    parameters : [clk_freq_hz=125000000]
+    tools:
+      vivado:
+        part : xc7z020clg484-1
+    toplevel : blinky
 
 parameters:
   clk_freq_hz:
