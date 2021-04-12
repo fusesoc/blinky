@@ -114,6 +114,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=&
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard
 
+### Fomu
+
+https://tomu.im/fomu.html
+
 ### FPC-III
 
 https://repo.or.cz/fpc-iii.git

@@ -242,6 +242,10 @@ filesets:
     files:
       - eclypse_z7/blinky.xdc : {file_type : xdc}
 
+  fomu-pvt:
+    files:
+      - fomu/fomu-pvt.pcf : {file_type : PCF}
+
 targets:
   default: &default
     filesets : [rtl]
@@ -853,6 +857,19 @@ targets:
         part : xc7z020clg484-1
     toplevel : blinky
 
+  fomu-pvt:
+    default_tool : icestorm
+    description : Fomu PVT with Lattice ICE40UP5K based open-source board
+    hooks:
+      post_run: [dfu-util-fomu]
+    filesets : [rtl, proginfo, fomu-pvt]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      icestorm:
+        nextpnr_options : ["--up5k", "--package", "uwg30"]
+        pnr : next
+    toplevel : blinky
+
 parameters:
   clk_freq_hz:
     datatype    : int
@@ -872,3 +889,5 @@ scripts:
     cmd : [python3, proginfo.py, ujprog]
   dfu-util:
     cmd : [python3, proginfo.py, dfu-util]
+  dfu-util-fomu:
+    cmd : [python3, proginfo.py, dfu-util-fomu]
