@@ -246,6 +246,11 @@ filesets:
     files:
       - fomu/fomu-pvt.pcf : {file_type : PCF}
 
+  basys2:
+    files:
+      - basys2/blinky.ucf :  {file_type : UCF}
+      - basys2/options.tcl : {file_type : tclSource}
+
 targets:
   default: &default
     filesets : [rtl]
@@ -869,6 +874,26 @@ targets:
         nextpnr_options : ["--up5k", "--package", "uwg30"]
         pnr : next
     toplevel : blinky
+
+  basys2-100e: &basys2
+    default_tool : ise
+    description : Digilent Basys 2 FPGA Development Board, Spartan 3E-100K gates
+    filesets : [rtl, basys2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan3E
+        device  : xc3s100e
+        package : cp132
+        speed   : -5
+    toplevel : blinky
+
+  basys2-250e:
+    <<: *basys2
+    description : Digilent Basys 2 FPGA Development Board, Spartan 3E-250K gates
+    tools:
+      ise:
+        device : xc3s250e
 
 parameters:
   clk_freq_hz:
