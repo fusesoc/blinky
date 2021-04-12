@@ -1,0 +1,17 @@
+# Blinky UCF for Digilent Basys2 utilizing Spartan-3E
+# See Digilent website for more details on UCF file: https://reference.digilentinc.com/reference/programmable-logic/basys-2/start
+
+NET "clk" LOC = "B8";   # Bank = 0, MCLK, 50MHz clock unloaded jumper connection
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+#NET "uclk" LOC = "M6"; # Bank = 2, UCLK, external crystal oscillator IC6 socket
+#NET "uclk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Pin assignment for LEDs
+#NET "Led<7>" LOC = "G1" ;  # Bank = 3, LD7
+#NET "Led<6>" LOC = "P4" ;  # Bank = 2, LD6
+#NET "Led<5>" LOC = "N4" ;  # Bank = 2, LD5
+#NET "Led<4>" LOC = "N5" ;  # Bank = 2, LD4
+#NET "Led<3>" LOC = "P6" ;  # Bank = 2, LD3
+#NET "Led<2>" LOC = "P7" ;  # Bank = 3, LD2
+#NET "Led<1>" LOC = "M11" ; # Bank = 2, LD1
+NET "q" LOC = "M5" ;        # Bank = 2, LD0
