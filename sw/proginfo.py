@@ -15,3 +15,6 @@ elif sys.argv[1] == 'ujprog':
     print("Other programming options are listed here https://github.com/emard/ulx3s/blob/master/doc/MANUAL.md#programming-options")
 elif sys.argv[1] == 'dfu-util':
     print("dfu-util -d 1209:5af0 -D {}".format(os.path.join(os.getcwd(), system_name+".bit")))
+elif sys.argv[1] == 'dfu-util-fomu':
+    print("Download and install dfu-util from http://dfu-util.sourceforge.net/")
+    print("dfu-util -e -d 1209:5bf0 -D {}".format(os.path.join(os.getcwd(), system_name+".bin")))

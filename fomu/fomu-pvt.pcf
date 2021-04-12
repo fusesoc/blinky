@@ -1,0 +1,5 @@
+set_io clk F4
+# Uncomment one option below to set which led to blink
+#set_io q A5 # Green Led
+#set_io q B5 # Red Led
+set_io q C5 # Blue Led
