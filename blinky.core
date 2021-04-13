@@ -42,6 +42,9 @@ filesets:
       - c10lp_refkit/c10lp_refkit.sdc : {file_type: SDC}
       - c10lp_refkit/pinmap.tcl       : {file_type: tclSource}
 
+  cmod_a7:
+    files: [cmod_a7/blinky.xdc : {file_type : xdc}]
+
   colorlight_5a75b:
     files: [colorlight_5a75b/blinky.lpf : {file_type : LPF}]
 
@@ -353,6 +356,16 @@ targets:
       quartus:
         family : Cyclone 10 LP
         device : 10CL055YU484C8G
+
+  cmod_a7:
+    default_tool : vivado
+    description : Digilent Cmod A7
+    filesets : [rtl, cmod_a7]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      vivado:
+        part : xc7a35tcpg236-1
+    toplevel : blinky
 
   colorlight_5a75b:
     default_tool : trellis
