@@ -7,6 +7,10 @@ filesets:
       - ac701/blinky_ac701.v : {file_type : verilogSource}
       - ac701/blinky.xdc : {file_type : xdc}
 
+  alchitry_au:
+    files:
+      - alchitry_au/blinky.xdc : {file_type : xdc}
+
   alhambra_II:
     files: [alhambra_II/pinout.pcf : {file_type : PCF}]
 
@@ -269,6 +273,16 @@ targets:
       vivado:
         part : xc7a200t-fbg676-2
     toplevel : blinky_ac701
+
+  alchitry_au:
+    default_tool: vivado
+    description : SparkFun Alchitry Au, 100 MHz Xilinx Artix-7 with 256MB DDR3 RAM
+    filesets: [rtl, alchitry_au]
+    parameters: [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part: xc7a35tftg256-1
+    toplevel: blinky
 
   alhambra_II:
     default_tool : icestorm
