@@ -95,6 +95,11 @@ filesets:
       - de5_net/de5_net.sdc : {file_type : SDC}
       - de5_net/pinmap.tcl  : {file_type: tclSource}
 
+  de10_nano:
+    files:
+      - de10_nano/de10_nano.sdc : {file_type : SDC}
+      - de10_nano/pinmap.tcl  : {file_type : tclSource}
+
   de10_soc:
     files:
       - de10_soc/de10_soc.sdc : {file_type : SDC}
@@ -492,6 +497,18 @@ targets:
       quartus:
         family : Cyclone V
         device : 5CSEMA5F31C6
+        board_device_index : 2
+    toplevel: blinky
+
+  de10_nano:
+    default_tool : quartus
+	description : Terasic DE10 Nano Kit
+    filesets : [rtl, de10_nano]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSEBA6U23I7
         board_device_index : 2
     toplevel: blinky
 
