@@ -502,7 +502,7 @@ targets:
 
   de10_nano:
     default_tool : quartus
-	description : Terasic DE10 Nano Kit
+    description : Terasic DE10 Nano Kit
     filesets : [rtl, de10_nano]
     parameters : [clk_freq_hz=50000000]
     tools:
