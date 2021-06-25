@@ -126,6 +126,11 @@ filesets:
       - genesys2/blinky.xdc : {file_type : xdc}
       - genesys2/blinky_genesys2.v : {file_type : verilogSource}
 
+  go_board:
+    files:
+      - go_board/pinout.pcf : {file_type : PCF}
+      - go_board/blinky_go_board.v : {file_type : verilogSource}
+  
   ice40hx1k_evb:
     files: [ice40hx1k_evb/pinout.pcf : {file_type : PCF}]
 
@@ -574,6 +579,16 @@ targets:
         board_device_index : 2
         cable : "USB-BlasterII"  # Is sufficient
     toplevel: blinky
+
+  go_board:
+    default_tool : icestorm
+    filesets : [proginfo, go_board]
+    parameters : [clk_freq_hz=20000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx1k, --package, vq100]
+        pnr : next
+    toplevel : blinky_go_board
 
   ice40hx1k_evb:
     default_tool : icestorm

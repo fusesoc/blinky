@@ -126,6 +126,10 @@ https://tomu.im/fomu.html
 
 https://repo.or.cz/fpc-iii.git
 
+### Nandland Go Board
+
+https://www.nandland.com/goboard/introduction.html
+
 ### ice40hx1k_evb
 
 https://www.olimex.com/wiki/ICE40HX1K-EVB
