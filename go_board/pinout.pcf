@@ -1,5 +1,5 @@
 set_io clk 15
-set_io q 56
+set_io led1 56
 set_io led2 57
 set_io led3 59
 set_io led4 60

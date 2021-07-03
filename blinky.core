@@ -583,7 +583,7 @@ targets:
   go_board:
     default_tool : icestorm
     filesets : [proginfo, go_board]
-    parameters : [clk_freq_hz=20000000]
+    parameters : [clk_freq_hz=25000000]
     tools:
       icestorm:
         nextpnr_options : [--hx1k, --package, vq100]
