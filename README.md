@@ -90,11 +90,11 @@ https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/CrossLink-NXEva
 
 https://shop.trenz-electronic.de/en/TEI0003-02-CYC1000-with-Cyclone-10-FPGA-8-MByte-SDRAM
 
-## Cisco HWIC-3G-CDMA
+### Cisco HWIC-3G-CDMA
 
 https://github.com/tomverbeure/cisco-hwic-3g-cdma
 
-## Waveshare CoreEP4CE10
+### Waveshare CoreEP4CE10
 
 https://www.waveshare.com/wiki/CoreEP4CE10
 
@@ -117,6 +117,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=&
 ### ecp5_evn
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard
+
+## EP2C5T144 Development Board
+
+http://land-boards.com/blwiki/index.php?title=Cyclone_II_EP2C5_Mini_Dev_Board
 
 ### Fomu
 
