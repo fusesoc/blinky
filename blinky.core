@@ -105,6 +105,11 @@ filesets:
       - de10_soc/de10_soc.sdc : {file_type : SDC}
       - de10_soc/pinmap.tcl  : {file_type : tclSource}
 
+  ep2c5t144:
+    files:
+      - ep2c5t144/ep2c5t144.sdc : {file_type : SDC}
+      - ep2c5t144/pinmap.tcl  : {file_type: tclSource}
+
   soc_kit:
     files:
       - soc_kit/soc_kit.sdc : {file_type : SDC}
@@ -434,6 +439,7 @@ targets:
   cisco-hwic-3g-cdma:
     <<: *default
     default_tool : quartus
+    description: Cisco HWIC-3G-CDMA Modem
     filesets_append : [cisco-hwic-3g-cdma]
     parameters : [clk_freq_hz=25000000]
     tools:
@@ -548,6 +554,17 @@ targets:
       trellis:
         nextpnr_options : [--um5g-85k --package CABGA381]
     toplevel : blinky
+
+  ep2c5t144:
+    <<: *default
+    default_tool : quartus
+    description: EP2C5T144 Development Board
+    filesets_append : [ep2c5t144]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone II
+        device : EP2C5T144C6
 
   fpc_iii:
     default_tool : trellis
