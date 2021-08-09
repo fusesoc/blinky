@@ -114,6 +114,19 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=2
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=&No=944&PartNo=1
 
+### EBAZ4205 'Development' Board
+
+This development board featuring `Zynq 7010` was the control card of Ebit E9+
+BTC miner.
+
+Note: The Zynq PL on this board doesn't have a reference clock without
+involving the Zynq PS. To workaround this problem, the onboard 33MHz clock
+oscillator can be physically bridged to the PL clock input pin. To do this,
+solder a fine wire from R2340 (the clock output of X8) to the PL clock input on
+the pad for the missing R1372 near X5.
+
+https://github.com/xjtuecho/EBAZ4205
+
 ### ecp5_evn
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard

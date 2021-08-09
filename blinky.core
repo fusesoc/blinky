@@ -257,6 +257,11 @@ filesets:
       - zybo_z7/blinky_zybo_z7.v : {file_type : verilogSource}
       - zybo_z7/blinky.xdc : {file_type : xdc}
 
+  ebaz4205:
+    files:
+      - ebaz4205/blinky_ebaz4205.v : {file_type : verilogSource}
+      - ebaz4205/combined.xdc : {file_type : xdc}
+
   polarfireeval:
     files:
       - polarfireeval/blinky_polarfireeval.v : {file_type : verilogSource}
@@ -908,6 +913,15 @@ targets:
         family : Cyclone IV E
         device : EP4CE6E22C8
     toplevel: blinky
+
+  ebaz4205: &ebaz4205
+    default_tool: vivado
+    description : EBAZ4205 'Development' Board
+    filesets : [rtl, ebaz4205]
+    tools:
+      vivado:
+        part : xc7z010clg400-1
+    toplevel : blinky_ebaz4205
 
   zybo_z7-10: &zybo_z7
     default_tool: vivado
