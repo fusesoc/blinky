@@ -191,6 +191,10 @@ https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KL
 
 https://www.microsemi.com/existing-parts/parts/150789
 
+## MYIR FZ3 - Deep Learning Accelerator Card
+
+http://www.myirtech.com/list.asp?id=630
+
 ### nexys_4
 
 https://reference.digilentinc.com/reference/programmable-logic/nexys-4/start

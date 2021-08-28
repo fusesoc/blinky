@@ -179,6 +179,8 @@ filesets:
 
   mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
 
+  myir_fz3: {files: [myir_fz3/blinky.xdc : {file_type : xdc}]}
+
   nexys_4: {files: [nexys_4/blinky.xdc : {file_type : xdc}]}
 
   nexys_a7: {files: [nexys_a7/blinky.xdc : {file_type : xdc}]}
@@ -729,6 +731,15 @@ targets:
     tools:
       vivado:
         part : xc7s25ftgb196-1
+    toplevel : blinky
+
+  myir_fz3:
+    default_tool: vivado
+    filesets: [rtl, myir_fz3]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      vivado:
+        part : xczu3eg-sfvc784-1-e
     toplevel : blinky
 
   nexys_4:
