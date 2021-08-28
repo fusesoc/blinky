@@ -735,6 +735,7 @@ targets:
 
   myir_fz3:
     default_tool: vivado
+    description: MYiR Tech FZ3 Card - Deep Learning Accelerator Card
     filesets: [rtl, myir_fz3]
     parameters : [clk_freq_hz=25000000]
     tools:
