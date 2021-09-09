@@ -287,6 +287,16 @@ filesets:
       - stlv7325/blinky.xdc : {file_type : xdc}
       - stlv7325/blinky_stlv7325.sv : {file_type : systemVerilogSource}
 
+  Wukong_v1:
+    files: 
+      - QMTECH_Artix7_Wukong/Wukong_v1.xdc : {file_type : xdc}
+      - QMTECH_Artix7_Wukong/blinky.v : {file_type : verilogSource}
+
+  Wukong_v2:
+    files: 
+      - QMTECH_Artix7_Wukong/Wukong_v2.xdc : {file_type : xdc}
+      - QMTECH_Artix7_Wukong/blinky.v : {file_type : verilogSource}
+
 targets:
   default: &default
     filesets : [rtl]
@@ -885,6 +895,36 @@ targets:
         nextpnr_options : [--up5k]
         pnr: next
     toplevel : blinky_upduino2
+
+  Wukong_100t_v1:
+    default_tool: vivado
+    description : QMTECH Artix-7 XC7A100T Wukong Board first revision
+    filesets : [Wukong_v1]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      vivado:
+        part : xc7a100tfgg676-2
+    toplevel : blinky
+
+  Wukong_100t_v2:
+    default_tool: vivado
+    description : QMTECH Artix-7 XC7A100T Wukong Board second revision
+    filesets : [Wukong_v2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      vivado:
+        part : xc7a100tfgg676-2
+    toplevel : blinky
+
+  Wukong_200t_v2:
+    default_tool: vivado
+    description : QMTECH Artix-7 XC7A200T Wukong Board second revision
+    filesets : [Wukong_v2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      vivado:
+        part : xc7a200tfbg676-1
+    toplevel : blinky
 
   xc6sl9_hseda_eda6.1:
     default_tool : ise
