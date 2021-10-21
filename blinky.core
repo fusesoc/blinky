@@ -153,6 +153,11 @@ filesets:
       - iceFUN/blinky.v : {file_type : verilogSource}
       - iceFUN/iceFUN.pcf : {file_type : PCF}
 
+  icesugar:
+    files:
+      - icesugar/blinky.v : {file_type : verilogSource}
+      - icesugar/icesugar.pcf : {file_type : PCF}
+
   iceWerx:
     files: [iceWerx/pinout.pcf : {file_type : PCF}]
 
@@ -674,6 +679,16 @@ targets:
         nextpnr_options : [--hx8k, --package, cb132]
         pnr : next
     toplevel : top
+
+  icesugar:
+    default_tool : icestorm
+    description : iCESugar board
+    filesets : [icesugar]
+    tools:
+       icestorm:
+        nextpnr_options : [--up5k, --package, sg48]
+        pnr : next
+    toplevel : Top
 
   iceWerx:
     default_tool : icestorm
