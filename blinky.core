@@ -671,7 +671,7 @@ targets:
   icesugar:
     default_tool : icestorm
     description : iCESugar board
-    filesets : [icesugar]
+    filesets : [rtl, proginfo, icesugar]
     hooks:
       post_run: [icesprog]
     tools:
