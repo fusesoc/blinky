@@ -672,6 +672,8 @@ targets:
     default_tool : icestorm
     description : iCESugar board
     filesets : [icesugar]
+    hooks:
+      post_run: [icesprog]
     tools:
        icestorm:
         nextpnr_options : [--up5k, --package, sg48]
@@ -1039,6 +1041,8 @@ parameters:
 scripts:
   iceprog:
     cmd : [python3, proginfo.py, iceprog]
+  icesprog:
+    cmd : [python3, proginfo.py, icesprog]
   tinyprog:
     cmd : [python3, proginfo.py, tinyprog]
   ujprog:
