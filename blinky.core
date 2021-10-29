@@ -223,6 +223,13 @@ filesets:
 
   tinyfpga_bx:
     files: [tinyfpga_bx/pinout.pcf : {file_type : PCF}]
+  
+  ultra96_v2:
+    files:
+      - ultra96_v2/blinky_ultra96_v2.v : {file_type : verilogSource}
+      - ultra96_v2/design_1_wrapper.v : {file_type : verilogSource}  
+      - ultra96_v2/blinky.xdc : {file_type : xdc}
+      - ultra96_v2/bd_ultra96_v2.tcl : {file_type : tclSource}
 
   ulx3s:
     files:
@@ -842,6 +849,15 @@ targets:
         nextpnr_options : [--lp8k, --package, cm81]
         pnr: next
     toplevel : blinky
+
+  ultra96_v2:
+    default_tool : vivado
+    description : Zynq UltraScale+ MPSoC Ultra96-v2 Development Board 
+    filesets : [rtl, ultra96_v2]
+    tools:
+      vivado:
+        part : xczu3eg-sbva484-1-i
+    toplevel : blinky_ultra96_v2
 
   ulx3s_45: &ulx3s
     default_tool : trellis
