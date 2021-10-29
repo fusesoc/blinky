@@ -244,6 +244,15 @@ https://tangnano.sipeed.com/en/
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
 
+### ultra96_v2
+
+https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/ultra96-v2/
+
+Note: There is no on-board clock for Zynq PL. Therefore, in this example PL clock is generated and supplied from
+Zynq PS in the block design. Block design tcl script is generated on Vivado 2020.2. If you have an other version
+of Vivado installation, you should just create and export the block design bd_ultra96_v2.tcl with fabric clock
+PL0 is enabled and made external.
+
 ### ulx3s_*
 
 https://radiona.org/ulx3s
@@ -261,7 +270,7 @@ http://www.hseda.com/product/xilinx/XC6SLX9COREV1.0/XC6SLX9CORE.htm
 ### zcu102
 
 https://www.xilinx.com/products/boards-and-kits/zcu102.html
-
+1
 ### zcu106
 
 https://www.xilinx.com/products/boards-and-kits/zcu106.html
