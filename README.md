@@ -211,6 +211,10 @@ http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
 
 http://pipistrello.saanlima.com/index.php?title=Welcome_to_Pipistrello
 
+### RZ-EasyFPGA A2.x
+
+http://fpga.redliquid.pl/
+
 ### S7 Mini
 
 https://shop.trenz-electronic.de/en/TE0890-01-25-1C-S7-Mini-Fully-Open-Source-Module-with-Xilinx-Spartan-7-7S25-64-MBit-HyperRAM
@@ -255,7 +259,7 @@ https://www.xilinx.com/products/boards-and-kits/zcu106.html
 
 ### zrtech_v2
 
-http://land-boards.com/blwiki/index.php?title=ZrTech_V2_EP4CE6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
+http://land-boards.com/blwiki/index.php?title=Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
 
 ### Zybo Z7-10 & Zybo Z7-20
 
