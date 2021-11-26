@@ -220,6 +220,9 @@ The Wukong board have two revisions : [Artix-7 XC7A100T](https://github.com/Chin
 
 Targets are `Wukong_v1` for revision 1 , `Wukong_100t_v2` and `Wukong_200t_v2` for revision 2. Those boards can be programmed with openFPGALoader.  
 
+### RZ-EasyFPGA A2.x
+
+http://fpga.redliquid.pl/
 
 ### S7 Mini
 
@@ -265,7 +268,7 @@ https://www.xilinx.com/products/boards-and-kits/zcu106.html
 
 ### zrtech_v2
 
-http://land-boards.com/blwiki/index.php?title=ZrTech_V2_EP4CE6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
+http://land-boards.com/blwiki/index.php?title=Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board_USB_V2
 
 ### Zybo Z7-10 & Zybo Z7-20
 

@@ -135,7 +135,7 @@ filesets:
     files:
       - go_board/pinout.pcf : {file_type : PCF}
       - go_board/blinky_go_board.v : {file_type : verilogSource}
-  
+
   ice40hx1k_evb:
     files: [ice40hx1k_evb/pinout.pcf : {file_type : PCF}]
 
@@ -207,6 +207,11 @@ filesets:
 
   rtl:
     files: [blinky.v : {file_type : verilogSource}]
+
+  rz_easyfpga_a2.x:
+    files:
+      - rz_easyfpga_a2.x/rz_easyfpga_a2.x.sdc : {file_type : SDC}
+      - rz_easyfpga_a2.x/pinmap.tcl    : {file_type: tclSource}
 
   proginfo:
     files: [sw/proginfo.py : {file_type : user, copyto : proginfo.py}]
@@ -840,6 +845,16 @@ targets:
       vivado:
         part : xc7z020clg400-1
     toplevel : blinky_pynq_z2
+
+  rz_easyfpga_a2.x:
+    default_tool : quartus
+    filesets : [rtl, rz_easyfpga_a2.x]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone IV E
+        device : EP4CE6E22C8
+    toplevel: blinky
 
   sim:
     default_tool: icarus
