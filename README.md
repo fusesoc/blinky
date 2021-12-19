@@ -191,6 +191,10 @@ https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KL
 
 https://www.microsemi.com/existing-parts/parts/150789
 
+## MYIR FZ3 - Deep Learning Accelerator Card
+
+http://www.myirtech.com/list.asp?id=630
+
 ### nexys_4
 
 https://reference.digilentinc.com/reference/programmable-logic/nexys-4/start
@@ -214,6 +218,11 @@ http://pipistrello.saanlima.com/index.php?title=Welcome_to_Pipistrello
 ### RZ-EasyFPGA A2.x
 
 http://fpga.redliquid.pl/
+
+### QMTECH Wukong Board Artix-7 XC7A100T & XC7A200T
+The Wukong board have two revisions : [Artix-7 XC7A100T](https://github.com/ChinaQMTECH/QM_XC7A100T_WUKONG_BOARD/blob/master/QMTECH_Artix-7_XC7A100T_Wukong_Board_User_Manual(Hardware)_V01.pdf) and Artix-7 XC7A[100T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A100T/QMTECH_Artix-7_XC7A100T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf)-[200T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A200T/QMTECH_Artix-7_XC7A200T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf) . The first revision have the 50 MHz clock on the wrong pin and don't have micro sd. 
+
+Targets are `Wukong_v1` for revision 1 , `Wukong_100t_v2` and `Wukong_200t_v2` for revision 2. Those boards can be programmed with openFPGALoader.  
 
 ### S7 Mini
 
