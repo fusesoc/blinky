@@ -439,7 +439,7 @@ targets:
         family : Cyclone 10 LP
         device : 10CL055YU484C8G
 
-  cmod_a7:
+  cmod_a7_35t:
     default_tool : vivado
     description : Digilent Cmod A7
     filesets : [rtl, cmod_a7]
@@ -447,6 +447,16 @@ targets:
     tools:
       vivado:
         part : xc7a35tcpg236-1
+    toplevel : blinky
+
+  cmod_a7_15t:
+    default_tool : vivado
+    description : Digilent Cmod A7
+    filesets : [rtl, cmod_a7]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      vivado:
+        part : xc7a15tcpg236-1
     toplevel : blinky
 
   colorlight_5a75b:
