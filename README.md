@@ -70,6 +70,14 @@ https://alhambrabits.com/alhambra/
 
 https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
 
+### cmod_a7
+
+This are two variants for this board:
+- 15t has ~10K LUTs. Use `--target=cmod_a7_15t`
+- 35t has ~20K LUTs. Use `--target=cmod_a7_35t`
+
+https://digilent.com/reference/programmable-logic/cmod-a7/reference-manual
+
 ### basys3
 
 https://store.digilentinc.com/basys-3-artix-7-fpga-beginner-board-recommended-for-introductory-users/
