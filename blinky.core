@@ -1,5 +1,5 @@
 CAPI=2:
-name : fusesoc:utils:blinky:1.1
+name : fusesoc:utils:blinky:1.1.1
 
 filesets:
   ac701:
