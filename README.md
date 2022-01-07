@@ -78,6 +78,10 @@ https://store.digilentinc.com/basys-3-artix-7-fpga-beginner-board-recommended-fo
 
 https://shop.trenz-electronic.de/en/TEI0009-02-055-8CA-Cyclone-10-LP-RefKit-10CL055-Development-Board-32-MByte-SDRAM-16-MByte-Flash
 
+### Chameleon96 (Arrow 96 CV SoC Board)
+
+https://github.com/SoCFPGA-learning/Chameleon96
+
 ### colorlight_5a75b
 
 https://fr.aliexpress.com/item/32281130824.html
