@@ -75,6 +75,13 @@ filesets:
       - sockit/sockit.sdc : {file_type : SDC}
       - sockit/pinmap.tcl   : {file_type: tclSource}
 
+  chameleon96:
+    files:
+      - chameleon96/chameleon96.sdc : {file_type : SDC}
+      - chameleon96/pinmap.tcl   : {file_type: tclSource}
+      - chameleon96/HPS.sv : {file_type : systemVerilogSource}
+      - chameleon96/CV_96.v : {file_type : verilogSource}
+      
   deca:
     files:
       - deca/deca.sdc : {file_type : SDC}
@@ -502,6 +509,17 @@ targets:
         device : 5CSXFC6D6F31C6
     toplevel: blinky
 
+  chameleon96:
+    default_tool : quartus
+    description : Chameleon96 (Arrow 96 CV SoC Board)
+    filesets : [rtl, chameleon96]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CSEBA6U19I7
+    toplevel: CV_96
+    
   deca:
     default_tool : quartus
     description : DECA Development kit by Terasic
