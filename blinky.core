@@ -41,6 +41,11 @@ filesets:
   basys3:
     files: [basys3/blinky.xdc : {file_type : xdc}]
 
+  bemicro_max10:
+    files:
+      - bemicro_max10/bemicro_max10.sdc : {file_type : SDC}
+      - bemicro_max10/pinmap.tcl  	: {file_type: tclSource}
+
   c10lp_refkit:
     files:
       - c10lp_refkit/c10lp_refkit.sdc : {file_type: SDC}
@@ -242,7 +247,7 @@ filesets:
 
   tinyfpga_bx:
     files: [tinyfpga_bx/pinout.pcf : {file_type : PCF}]
-  
+
   ultra96_v2:
     files:
       - ultra96_v2/blinky_ultra96_v2.v : {file_type : verilogSource}
@@ -427,6 +432,17 @@ targets:
       vivado:
         part : xc7a35tcpg236-1
     toplevel : blinky
+
+  bemicro_max10:
+    <<: *default
+    default_tool : quartus
+    description: Arrow BeMicro MAX 10
+    filesets_append : [bemicro_max10]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : MAX 10
+        device : 10M08DAF484C8GES
 
   c10lp_refkit:
     <<: *default
