@@ -1,0 +1,7 @@
+# Blinky UCF for Digilent S3E Starter board with Spartan-3E
+
+NET "clk" LOC = "C9" | IOSTANDARD = LVCMOS33 ;   
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Pin assignment for LEDs
+NET "q" LOC = "F12"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ; # LED<0>

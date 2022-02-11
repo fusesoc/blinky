@@ -117,6 +117,11 @@ filesets:
       - de10_soc/de10_soc.sdc : {file_type : SDC}
       - de10_soc/pinmap.tcl  : {file_type : tclSource}
 
+  digilent_s3estarter:
+    files:
+      - digilent_s3estarter/blinky.ucf :  {file_type : UCF}
+      - digilent_s3estarter/options.tcl : {file_type : tclSource}
+
   ep2c5t144:
     files:
       - ep2c5t144/ep2c5t144.sdc : {file_type : SDC}
@@ -623,6 +628,20 @@ targets:
         family : Stratix V
         device : 5SGXEA7N2F45C2
     toplevel: blinky
+  
+  digilent_s3estarter:
+    default_tool : ise
+    filesets : [rtl, digilent_s3estarter]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan3E
+        device  : xc3s500e
+        package : fg320
+        speed   : -4
+        board_device_index: 3
+    toplevel : blinky
+
 
   ecp5_evn:
     default_tool : trellis
