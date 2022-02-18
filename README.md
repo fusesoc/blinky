@@ -126,6 +126,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=1
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=1046
 
+### de10_nano_mistral
+
+Build de10_nano bitstream with project [mistral](https://github.com/Ravenslofty/mistral)
+
 ### DECA
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=&No=944&PartNo=1

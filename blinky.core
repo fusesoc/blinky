@@ -86,7 +86,7 @@ filesets:
       - chameleon96/pinmap.tcl   : {file_type: tclSource}
       - chameleon96/HPS.sv : {file_type : systemVerilogSource}
       - chameleon96/CV_96.v : {file_type : verilogSource}
-      
+
   deca:
     files:
       - deca/deca.sdc : {file_type : SDC}
@@ -111,6 +111,11 @@ filesets:
     files:
       - de10_nano/de10_nano.sdc : {file_type : SDC}
       - de10_nano/pinmap.tcl  : {file_type : tclSource}
+
+  de10_nano_mistral:
+    files:
+      - de10_nano_mistral/blinky.v : {file_type : verilogSource}
+      - de10_nano_mistral/de10nano.qsf : {file_type : QSF}
 
   de10_soc:
     files:
@@ -256,7 +261,7 @@ filesets:
   ultra96_v2:
     files:
       - ultra96_v2/blinky_ultra96_v2.v : {file_type : verilogSource}
-      - ultra96_v2/design_1_wrapper.v : {file_type : verilogSource}  
+      - ultra96_v2/design_1_wrapper.v : {file_type : verilogSource}
       - ultra96_v2/blinky.xdc : {file_type : xdc}
       - ultra96_v2/bd_ultra96_v2.tcl : {file_type : tclSource}
 
@@ -322,12 +327,12 @@ filesets:
       - stlv7325/blinky_stlv7325.sv : {file_type : systemVerilogSource}
 
   Wukong_v1:
-    files: 
+    files:
       - QMTECH_Artix7_Wukong/Wukong_v1.xdc : {file_type : xdc}
       - QMTECH_Artix7_Wukong/blinky.v : {file_type : verilogSource}
 
   Wukong_v2:
-    files: 
+    files:
       - QMTECH_Artix7_Wukong/Wukong_v2.xdc : {file_type : xdc}
       - QMTECH_Artix7_Wukong/blinky.v : {file_type : verilogSource}
 
@@ -551,7 +556,7 @@ targets:
         device : 5CSEBA6U19I7
         board_device_index : 2
     toplevel: CV_96
-    
+
   deca:
     default_tool : quartus
     description : DECA Development kit by Terasic
@@ -607,6 +612,18 @@ targets:
         board_device_index : 2
     toplevel: blinky
 
+  de10_nano_mistral:
+    default_tool : mistral
+    description : Terasic DE10 Nano Kit with mistral toolchain
+    filesets : [de10_nano_mistral]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      mistral:
+        yosys_synth_options : [ -family cyclonev ]
+        nextpnr_options : [--freq 50]
+        device: 5CSEBA6U23I7
+    toplevel: blinky
+
   de10_soc:
     default_tool : quartus
     filesets : [rtl, de10_soc]
@@ -628,7 +645,7 @@ targets:
         family : Stratix V
         device : 5SGXEA7N2F45C2
     toplevel: blinky
-  
+
   digilent_s3estarter:
     default_tool : ise
     filesets : [rtl, digilent_s3estarter]
@@ -970,7 +987,7 @@ targets:
 
   ultra96_v2:
     default_tool : vivado
-    description : Zynq UltraScale+ MPSoC Ultra96-v2 Development Board 
+    description : Zynq UltraScale+ MPSoC Ultra96-v2 Development Board
     filesets : [rtl, ultra96_v2]
     tools:
       vivado:
