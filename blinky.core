@@ -137,6 +137,12 @@ filesets:
       - de10_nano/de10_nano.sdc : {file_type : SDC}
       - de10_nano/pinmap.tcl  : {file_type : tclSource}
 
+  de10_nano_mistral:
+    files:
+      - blinky.v : {file_type : verilogSource}
+      - de10_nano_mistral/blinky_de10_nano.v : {file_type : verilogSource}
+      - de10_nano_mistral/de10nano.qsf : {file_type : QSF}
+
   de10_soc:
     files:
       - de10_soc/de10_soc.sdc : {file_type : SDC}
@@ -717,6 +723,18 @@ targets:
         device : 5CSEBA6U23I7
         board_device_index : 2
     toplevel: blinky
+
+  de10_nano_mistral:
+    default_tool : mistral
+    description : Terasic DE10 Nano Kit with mistral toolchain
+    filesets : [de10_nano_mistral]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      mistral:
+        yosys_synth_options : [ -family cyclonev ]
+        nextpnr_options : [--freq 50 ]
+        device: 5CSEBA6U23I7
+    toplevel: blinky_de10_nano
 
   de10_soc:
     default_tool : quartus
