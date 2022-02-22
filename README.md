@@ -70,6 +70,10 @@ https://alhambrabits.com/alhambra/
 
 https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
 
+### ax309
+
+http://www.alinx.com/en/index.php/default/content/143.html
+
 ### bemicro_max10
 
 https://www.arrow.com/en/products/bemicromax10/arrow-development-tools
