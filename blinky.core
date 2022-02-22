@@ -38,6 +38,10 @@ filesets:
   arty_z7_20:
     files: [arty_z7_20/blinky.xdc : {file_type : xdc}]
 
+  ax309:
+    files:
+      - ax309/blinky.ucf : {file_type : UCF}
+
   basys3:
     files: [basys3/blinky.xdc : {file_type : xdc}]
 
@@ -427,6 +431,19 @@ targets:
     tools:
       vivado:
         part : xc7z020clg400-1
+    toplevel : blinky
+
+  ax309:
+    default_tool : ise
+    description : XILINX Spartan-6 XC6SLX9 FPGA Development Board
+    filesets : [rtl, ax309]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan6
+        device  : xc6slx9
+        package : ftg256
+        speed   : -3
     toplevel : blinky
 
   basys3:
