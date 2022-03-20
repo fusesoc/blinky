@@ -1,3 +1,4 @@
+
 module blinky
   #(parameter clk_freq_hz = 50000000)
    (input  clk,

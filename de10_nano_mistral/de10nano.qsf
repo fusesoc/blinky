@@ -9,6 +9,7 @@ set_location_assignment PIN_V16 -to led[2]
 set_location_assignment PIN_AA24 -to led[1]
 set_location_assignment PIN_W15 -to led[0]
 
+
 set_location_assignment PIN_V11 -to clk
 
 
