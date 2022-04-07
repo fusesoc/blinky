@@ -211,7 +211,7 @@ https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KL
 
 https://www.microsemi.com/existing-parts/parts/150789
 
-## MYIR FZ3 - Deep Learning Accelerator Card
+### MYIR FZ3 - Deep Learning Accelerator Card
 
 http://www.myirtech.com/list.asp?id=630
 
@@ -290,7 +290,7 @@ http://www.hseda.com/product/xilinx/XC6SLX9COREV1.0/XC6SLX9CORE.htm
 ### zcu102
 
 https://www.xilinx.com/products/boards-and-kits/zcu102.html
-1
+
 ### zcu106
 
 https://www.xilinx.com/products/boards-and-kits/zcu106.html
