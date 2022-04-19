@@ -242,6 +242,11 @@ filesets:
       - pynq_z2/blinky_pynq_z2.v : {file_type : verilogSource}
       - pynq_z2/blinky.xdc : {file_type : xdc}
 
+  qmtech_5cefa5f23:
+    files:
+     - qmtech_5cefa5f23/blinky_qmtech_5cefa5f23.v : {file_type : verilogSource }
+     - qmtech_5cefa5f23/io.qsf : {file_type : QSF}     
+
   spartan_edge_accelerator_board:
     files: [spartan_edge_accelerator_board/blinky.xdc : {file_type : xdc}]
 
@@ -933,6 +938,18 @@ targets:
       vivado:
         part : xc7z020clg400-1
     toplevel : blinky_pynq_z2
+  
+  qmtech_5cefa5f23:
+    default_tool : mistral
+    description: QMTech Cyclone V Core Board 5CEFA5F23
+    filesets : [rtl,qmtech_5cefa5f23]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      mistral:
+        yosys_synth_options : [-family,cyclonev]
+        nextpnr_options : [--freq , 50]
+        device: 5CEFA5F23I7
+    toplevel: blinky_qmtech_5cefa5f23
 
   rz_easyfpga_a2.x:
     default_tool : quartus
