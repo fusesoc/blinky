@@ -6,10 +6,28 @@ filesets:
     files:
       - ac701/blinky_ac701.v : {file_type : verilogSource}
       - ac701/blinky.xdc : {file_type : xdc}
-
+  
   alchitry_au:
     files:
       - alchitry_au/blinky.xdc : {file_type : xdc}
+
+  alchitry_au_plus:
+    files:
+      - alchitry_au_plus/blinky.xdc : {file_type : xdc}
+
+  alchitry_au_plus_io:
+    files:
+      - alchitry_au_plus_io/blinky.xdc : {file_type : xdc}
+
+  alchitry_cu:
+    files:
+      - alchitry_cu/pinout.pcf : {file_type : PCF}
+      - alchitry_cu/alchitry.sdc : {file_type : SDC}
+
+  alchitry_cu_io:
+    files:
+      - alchitry_cu_io/pinout.pcf : {file_type : PCF}
+      - alchitry_cu_io/alchitry.sdc : {file_type : SDC}
 
   alhambra_II:
     files: [alhambra_II/pinout.pcf : {file_type : PCF}]
@@ -362,6 +380,50 @@ targets:
     tools:
       vivado:
         part: xc7a35tftg256-1
+    toplevel: blinky
+
+  alchitry_au_plus:
+    default_tool: vivado
+    description : SparkFun Alchitry Au+, 100 MHz Xilinx Artix-7 with 256MB DDR3 RAM
+    filesets: [rtl, alchitry_au_plus]
+    parameters: [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part: xc7a100tftg256-1
+    toplevel: blinky
+
+  alchitry_au_plus_io:
+    default_tool: vivado
+    description : SparkFun Alchitry Au+, 100 MHz Xilinx Artix-7 with 256MB DDR3 RAM (with Io Element Board)
+    filesets: [rtl, alchitry_au_plus_io]
+    parameters: [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part: xc7a100tftg256-1
+    toplevel: blinky
+
+  alchitry_cu:
+    default_tool: icestorm
+    description: SparkFun Alchitry Cu, 100MHz iCE40-HX4K
+    filesets: [rtl, proginfo, alchitry_cu]
+    parameters: [clk_freq_hz=100000000]
+    tools:
+      icestorm:
+        pnr: next
+        nextpnr_options: [--hx8k, --package, cb132]
+        arch: ice40
+    toplevel: blinky
+
+  alchitry_cu_io:
+    default_tool: icestorm
+    description: SparkFun Alchitry Cu, 100MHz iCE40-HX4K (with Io Element Board)
+    filesets: [rtl, proginfo, alchitry_cu_io]
+    parameters: [clk_freq_hz=100000000]
+    tools:
+      icestorm:
+        pnr: next
+        nextpnr_options: [--hx8k, --package, cb132]
+        arch: ice40
     toplevel: blinky
 
   alhambra_II:
