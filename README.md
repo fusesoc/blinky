@@ -62,6 +62,20 @@ http://www.armadeus.org/wiki/index.php?title=APF27
 
 http://www.armadeus.org/wiki/index.php?title=APF51
 
+### Alchitry
+
+Supports the Alchitry [Cu](https://alchitry.com/boards/cu), [Au](https://alchitry.com/boards/au), and [Au+](https://www.sparkfun.com/products/17514) boards, plus the [Io Element expansion board](https://alchitry.com/boards/cu-1-1) which can be used by any of the devices.  Use the following targets:
+
+* Cu: `alchitry_cu`
+* Cu with Io Element: `alchitry_cu_io`
+* Au: `alchitry_au`
+* Au+: `alchitry_au_plus`
+* Au+ with Io Element: `alchitry_au_plus_io`
+
+All `.bin` files need to be loaded onto the devices using the Alchitry Loader (which is part of [Alchitry Labs](https://alchitry.com/alchitry-labs)).
+
+The cores for the Cu are built using IceStorm, and the cores for the Au and Au+ are built with Xilinx Vivado.  Since Vivado does not recognize the devices natively, when building for the Au pass the `--setup` and `--build` flags.  Otherwise, FuseSoC will fail when trying to load onto the device.
+
 ### Alhambra II
 
 https://alhambrabits.com/alhambra/
