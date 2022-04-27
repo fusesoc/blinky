@@ -207,7 +207,10 @@ filesets:
 
   myir_fz3: {files: [myir_fz3/blinky.xdc : {file_type : xdc}]}
   
-  nexys_2: {files: [nexys_2/blinky.ucf : {file_type : UCF}]}
+  nexys_2:
+    files:
+      - nexys_2/blinky.ucf :  {file_type : UCF}
+      - nexys_2/options.tcl : {file_type : tclSource}
 
   nexys_4: {files: [nexys_4/blinky.xdc : {file_type : xdc}]}
 
