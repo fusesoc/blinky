@@ -217,6 +217,11 @@ http://www.myirtech.com/list.asp?id=630
 
 ### nexys_2
 
+There are two vairants available for NEXYS 2 board
+
+- For Nexys 2-500 : Use `--target=nexys_2_500`
+- For Nexys 2-1200 : Use `-target=nexys_2_1200`
+
 https://digilent.com/reference/programmable-logic/nexys-2/start
 
 ### nexys_4

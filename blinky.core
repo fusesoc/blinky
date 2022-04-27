@@ -664,7 +664,7 @@ targets:
         board_device_index: 3
     toplevel : blinky
     
-  nexys_2:
+  nexys_2_500:
     default_tool : ise
     filesets : [rtl, nexys_2]
     parameters : [clk_freq_hz=50000000]
@@ -675,7 +675,18 @@ targets:
         package : fg320
         speed   : -4
     toplevel : blinky
-
+  
+  nexys_2_1200:
+    default_tool : ise
+    filesets : [rtl, nexys_2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan3E
+        device  : xc3s1600e
+        package : fg320
+        speed   : -4
+    toplevel : blinky
 
   ecp5_evn:
     default_tool : trellis
