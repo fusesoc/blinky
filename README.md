@@ -215,6 +215,10 @@ https://www.microsemi.com/existing-parts/parts/150789
 
 http://www.myirtech.com/list.asp?id=630
 
+### nexys_2
+
+https://digilent.com/reference/programmable-logic/nexys-2/start
+
 ### nexys_4
 
 https://reference.digilentinc.com/reference/programmable-logic/nexys-4/start
