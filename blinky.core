@@ -224,6 +224,11 @@ filesets:
   mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
 
   myir_fz3: {files: [myir_fz3/blinky.xdc : {file_type : xdc}]}
+  
+  nexys_2:
+    files:
+      - nexys_2/blinky.ucf :  {file_type : UCF}
+      - nexys_2/options.tcl : {file_type : tclSource}
 
   nexys_4: {files: [nexys_4/blinky.xdc : {file_type : xdc}]}
 
@@ -725,7 +730,30 @@ targets:
         speed   : -4
         board_device_index: 3
     toplevel : blinky
-
+    
+  nexys_2_500:
+    default_tool : ise
+    filesets : [rtl, nexys_2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan3E
+        device  : xc3s500e
+        package : fg320
+        speed   : -4
+    toplevel : blinky
+  
+  nexys_2_1200:
+    default_tool : ise
+    filesets : [rtl, nexys_2]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : Spartan3E
+        device  : xc3s1600e
+        package : fg320
+        speed   : -4
+    toplevel : blinky
 
   ecp5_evn:
     default_tool : trellis
