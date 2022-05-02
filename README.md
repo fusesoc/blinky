@@ -80,9 +80,9 @@ The cores for the Cu are built using IceStorm, and the cores for the Au and Au+ 
 
 https://alhambrabits.com/alhambra/
 
-### arty_a7_35t
+### arty_a7_35t/arty_a7_100t
 
-https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
+https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/
 
 ### ax309
 
