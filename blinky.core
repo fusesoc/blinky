@@ -50,6 +50,9 @@ filesets:
   arty_a7_35t:
     files: [arty_a7_35t/blinky.xdc : {file_type : xdc}]
 
+  arty_a7_100t:
+    files: [arty_a7_100t/blinky.xdc : {file_type : xdc}]
+
   arty_s7_50t:
     files: [arty_s7_50t/blinky.xdc : {file_type : xdc}]
 
@@ -485,6 +488,15 @@ targets:
     tools:
       vivado:
         part : xc7a35ticsg324-1L
+    toplevel : blinky
+
+  arty_a7_100t:
+    default_tool : vivado
+    filesets : [rtl, arty_a7_100t]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      vivado:
+        part : xc7a100tcsg324-1
     toplevel : blinky
 
   arty_s7_50t:
