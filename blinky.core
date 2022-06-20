@@ -6,7 +6,7 @@ filesets:
     files:
       - ac701/blinky_ac701.v : {file_type : verilogSource}
       - ac701/blinky.xdc : {file_type : xdc}
-  
+
   alchitry_au:
     files:
       - alchitry_au/blinky.xdc : {file_type : xdc}
@@ -111,7 +111,7 @@ filesets:
       - chameleon96/pinmap.tcl   : {file_type: tclSource}
       - chameleon96/HPS.sv : {file_type : systemVerilogSource}
       - chameleon96/CV_96.v : {file_type : verilogSource}
-      
+
   deca:
     files:
       - deca/deca.sdc : {file_type : SDC}
@@ -227,7 +227,7 @@ filesets:
   mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
 
   myir_fz3: {files: [myir_fz3/blinky.xdc : {file_type : xdc}]}
-  
+
   nexys_2:
     files:
       - nexys_2/blinky.ucf :  {file_type : UCF}
@@ -271,7 +271,7 @@ filesets:
   qmtech_5cefa5f23:
     files:
      - qmtech_5cefa5f23/blinky_qmtech_5cefa5f23.v : {file_type : verilogSource }
-     - qmtech_5cefa5f23/io.qsf : {file_type : QSF}     
+     - qmtech_5cefa5f23/io.qsf : {file_type : QSF}
 
   spartan_edge_accelerator_board:
     files: [spartan_edge_accelerator_board/blinky.xdc : {file_type : xdc}]
@@ -291,7 +291,7 @@ filesets:
   ultra96_v2:
     files:
       - ultra96_v2/blinky_ultra96_v2.v : {file_type : verilogSource}
-      - ultra96_v2/design_1_wrapper.v : {file_type : verilogSource}  
+      - ultra96_v2/design_1_wrapper.v : {file_type : verilogSource}
       - ultra96_v2/blinky.xdc : {file_type : xdc}
       - ultra96_v2/bd_ultra96_v2.tcl : {file_type : tclSource}
 
@@ -357,14 +357,19 @@ filesets:
       - stlv7325/blinky_stlv7325.sv : {file_type : systemVerilogSource}
 
   Wukong_v1:
-    files: 
+    files:
       - QMTECH_Artix7_Wukong/Wukong_v1.xdc : {file_type : xdc}
       - QMTECH_Artix7_Wukong/blinky.v : {file_type : verilogSource}
 
   Wukong_v2:
-    files: 
+    files:
       - QMTECH_Artix7_Wukong/Wukong_v2.xdc : {file_type : xdc}
       - QMTECH_Artix7_Wukong/blinky.v : {file_type : verilogSource}
+
+  cora_z7:
+    files:
+      - cora_z7/blinky_cora_z7.vhd : {file_type : vhdlSource}
+      - cora_z7/blinky_cora_z7.xdc : {file_type : xdc}
 
 targets:
   default: &default
@@ -652,7 +657,7 @@ targets:
         device : 5CSEBA6U19I7
         board_device_index : 2
     toplevel: CV_96
-    
+
   deca:
     default_tool : quartus
     description : DECA Development kit by Terasic
@@ -729,7 +734,7 @@ targets:
         family : Stratix V
         device : 5SGXEA7N2F45C2
     toplevel: blinky
-  
+
   digilent_s3estarter:
     default_tool : ise
     filesets : [rtl, digilent_s3estarter]
@@ -742,7 +747,7 @@ targets:
         speed   : -4
         board_device_index: 3
     toplevel : blinky
-    
+
   nexys_2_500:
     default_tool : ise
     filesets : [rtl, nexys_2]
@@ -754,7 +759,7 @@ targets:
         package : fg320
         speed   : -4
     toplevel : blinky
-  
+
   nexys_2_1200:
     default_tool : ise
     filesets : [rtl, nexys_2]
@@ -1040,7 +1045,7 @@ targets:
       vivado:
         part : xc7z020clg400-1
     toplevel : blinky_pynq_z2
-  
+
   qmtech_5cefa5f23:
     default_tool : mistral
     description: QMTech Cyclone V Core Board 5CEFA5F23
@@ -1106,7 +1111,7 @@ targets:
 
   ultra96_v2:
     default_tool : vivado
-    description : Zynq UltraScale+ MPSoC Ultra96-v2 Development Board 
+    description : Zynq UltraScale+ MPSoC Ultra96-v2 Development Board
     filesets : [rtl, ultra96_v2]
     tools:
       vivado:
@@ -1309,6 +1314,16 @@ targets:
       vivado:
         part : xc7k325tffg676-2
     toplevel : blinky_stlv7325
+
+  cora_z7-07s: &cora_z7
+    default_tool: vivado
+    description : Digilent Cora Z7-07S SoC Kit
+    filesets : [cora_z7]
+    parameters : [clk_freq_hz=125000000]
+    tools:
+      vivado:
+        part : xc7z007sclg400-1
+    toplevel : blinky_cora_z7_top
 
 
 parameters:
