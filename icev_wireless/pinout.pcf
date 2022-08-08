@@ -1,0 +1,4 @@
+set_io clk 35
+
+# use q values: 39 = red, 40 = green, 41 = blue
+set_io q 40
