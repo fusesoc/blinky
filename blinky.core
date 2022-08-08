@@ -196,6 +196,9 @@ filesets:
   icebreaker:
     files: [icebreaker/pinout.pcf : {file_type : PCF}]
 
+  icev_wireless:
+    files: [icev_wireless/pinout.pcf : {file_type : PCF}]
+
   iceFUN:
     files:
       - iceFUN/blinky.v : {file_type : verilogSource}
@@ -946,6 +949,18 @@ targets:
   icebreaker:
     default_tool : icestorm
     filesets : [rtl, proginfo, icebreaker]
+    hooks:
+      post_run: [iceprog]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options: [--up5k, --package, sg48]
+        pnr: next
+    toplevel : blinky
+
+  icev_wireless:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, icev_wireless]
     hooks:
       post_run: [iceprog]
     parameters : [clk_freq_hz=12000000]
