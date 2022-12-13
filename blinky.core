@@ -273,6 +273,11 @@ filesets:
      - qmtech_5cefa5f23/blinky_qmtech_5cefa5f23.v : {file_type : verilogSource }
      - qmtech_5cefa5f23/io.qsf : {file_type : QSF}
 
+  spartan3a_starter_kit:
+    files:
+      - spartan3a_starter_kit/blinky.ucf : {file_type : UCF}
+      - spartan3a_starter_kit/options.tcl : {file_type : tclSource}
+
   spartan_edge_accelerator_board:
     files: [spartan_edge_accelerator_board/blinky.xdc : {file_type : xdc}]
 
@@ -1078,6 +1083,34 @@ targets:
       xsim:
         xelab_options: [--timescale, 1ns/1ns]
     toplevel: blinky_tb
+
+  spartan3a_starter_kit:
+    default_tool : ise
+    description : XILINX Spartan-3A FPGA Starter Kit
+    filesets : [rtl, spartan3a_starter_kit]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : "\"Spartan3A and Spartan3AN\""
+        device  : xc3s700a
+        package : fgg484
+        speed   : -4
+        board_device_index : 1
+    toplevel : blinky
+
+  spartan3an_starter_kit:
+    default_tool : ise
+    description : XILINX Spartan-3AN FPGA Starter Kit
+    filesets : [rtl, spartan3a_starter_kit]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      ise:
+        family  : "\"Spartan3A and Spartan3AN\""
+        device  : xc3s700an
+        package : fgg484
+        speed   : -4
+        board_device_index : 1
+    toplevel : blinky
 
   spartan_edge_accelerator_board:
     default_tool : vivado
