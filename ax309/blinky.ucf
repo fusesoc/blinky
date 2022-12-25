@@ -1,0 +1,6 @@
+# Clock at 50MHz
+NET clk LOC = T8 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_clk = PERIOD sys_clk_pin 50000 kHz;
+
+# LED
+NET q LOC = P4 | IOSTANDARD = LVCMOS33; # led<0>

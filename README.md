@@ -62,13 +62,31 @@ http://www.armadeus.org/wiki/index.php?title=APF27
 
 http://www.armadeus.org/wiki/index.php?title=APF51
 
+### Alchitry
+
+Supports the Alchitry [Cu](https://alchitry.com/boards/cu), [Au](https://alchitry.com/boards/au), and [Au+](https://www.sparkfun.com/products/17514) boards, plus the [Io Element expansion board](https://alchitry.com/boards/cu-1-1) which can be used by any of the devices.  Use the following targets:
+
+* Cu: `alchitry_cu`
+* Cu with Io Element: `alchitry_cu_io`
+* Au: `alchitry_au`
+* Au+: `alchitry_au_plus`
+* Au+ with Io Element: `alchitry_au_plus_io`
+
+All `.bin` files need to be loaded onto the devices using the Alchitry Loader (which is part of [Alchitry Labs](https://alchitry.com/alchitry-labs)).
+
+The cores for the Cu are built using IceStorm, and the cores for the Au and Au+ are built with Xilinx Vivado.  Since Vivado does not recognize the devices natively, when building for the Au pass the `--setup` and `--build` flags.  Otherwise, FuseSoC will fail when trying to load onto the device.
+
 ### Alhambra II
 
 https://alhambrabits.com/alhambra/
 
-### arty_a7_35t
+### arty_a7_35t/arty_a7_100t
 
-https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
+https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/
+
+### ax309
+
+http://www.alinx.com/en/index.php/default/content/143.html
 
 ### bemicro_max10
 
@@ -211,9 +229,18 @@ https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KL
 
 https://www.microsemi.com/existing-parts/parts/150789
 
-## MYIR FZ3 - Deep Learning Accelerator Card
+### MYIR FZ3 - Deep Learning Accelerator Card
 
 http://www.myirtech.com/list.asp?id=630
+
+### nexys_2
+
+There are two vairants available for NEXYS 2 board
+
+- For Nexys 2-500 : Use `--target=nexys_2_500`
+- For Nexys 2-1200 : Use `--target=nexys_2_1200`
+
+https://digilent.com/reference/programmable-logic/nexys-2/start
 
 ### nexys_4
 
@@ -234,6 +261,11 @@ http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
 ### pipistrello
 
 http://pipistrello.saanlima.com/index.php?title=Welcome_to_Pipistrello
+
+### qmtech_5cefa5f23
+https://github.com/ChinaQMTECH/QM_CYCLONE_V/tree/master/5CEFA5F23
+
+This example use [mistral toolchain](https://github.com/Ravenslofty/mistral)
 
 ### QMTECH Wukong Board Artix-7 XC7A100T & XC7A200T
 The Wukong board have two revisions : [Artix-7 XC7A100T](https://github.com/ChinaQMTECH/QM_XC7A100T_WUKONG_BOARD/blob/master/QMTECH_Artix-7_XC7A100T_Wukong_Board_User_Manual(Hardware)_V01.pdf) and Artix-7 XC7A[100T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A100T/QMTECH_Artix-7_XC7A100T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf)-[200T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A200T/QMTECH_Artix-7_XC7A200T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf) . The first revision have the 50 MHz clock on the wrong pin and don't have micro sd. 
@@ -290,7 +322,7 @@ http://www.hseda.com/product/xilinx/XC6SLX9COREV1.0/XC6SLX9CORE.htm
 ### zcu102
 
 https://www.xilinx.com/products/boards-and-kits/zcu102.html
-1
+
 ### zcu106
 
 https://www.xilinx.com/products/boards-and-kits/zcu106.html

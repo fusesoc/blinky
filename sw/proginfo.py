@@ -1,7 +1,7 @@
 import os
 import sys
 
-system_name = "fusesoc_utils_blinky_1.0"
+system_name = "fusesoc_utils_blinky_*"
 print("")
 print("Build was completed")
 print("")

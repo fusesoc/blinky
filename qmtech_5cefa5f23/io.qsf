@@ -1,0 +1,7 @@
+set_location_assignment PIN_M9 -to clk
+set_location_assignment PIN_V19 -to q[0]
+set_location_assignment PIN_T20 -to q[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to q[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to q[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk
+
