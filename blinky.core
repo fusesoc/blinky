@@ -139,7 +139,8 @@ filesets:
 
   de10_nano_mistral:
     files:
-      - de10_nano_mistral/blinky.v : {file_type : verilogSource}
+      - blinky.v : {file_type : verilogSource}
+      - de10_nano_mistral/blinky_de10_nano.v : {file_type : verilogSource}
       - de10_nano_mistral/de10nano.qsf : {file_type : QSF}
 
   de10_soc:
@@ -728,7 +729,7 @@ targets:
         yosys_synth_options : [ -family cyclonev ]
         nextpnr_options : [--freq 50 ]
         device: 5CSEBA6U23I7
-    toplevel: blinky
+    toplevel: blinky_de10_nano
 
   de10_soc:
     default_tool : quartus
