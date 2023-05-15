@@ -250,6 +250,11 @@ https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-cu
 
 https://reference.digilentinc.com/reference/programmable-logic/nexys-video/start
 
+### nitefury_ii
+
+https://rhsresearch.com/collections/rhs-public/products/nitefury-xilinx-artix-fpga-kit-in-nvme-ssd-form-factor-2280-key-m
+https://github.com/RHSResearchLLC/NiteFury-and-LiteFury
+
 ### opos6ul_sp
 
 http://www.armadeus.org/wiki/index.php?title=OPOS6UL_SP
