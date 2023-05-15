@@ -239,6 +239,11 @@ filesets:
 
   nexys_video: {files: [nexys_video/blinky.xdc : {file_type : xdc}]}
 
+  nitefury_ii:
+    files:
+      - nitefury_ii/blinky_nitefury_ii.v : {file_type : verilogSource}
+      - nitefury_ii/blinky.xdc : {file_type : xdc}
+
   opos6ul_sp:
     files:
       - opos6ul_sp/blinky.ucf : {file_type : UCF}
@@ -1001,6 +1006,14 @@ targets:
       vivado:
         part : xc7a200tsbg484-1
     toplevel : blinky
+
+  nitefury_ii:
+    default_tool: vivado
+    filesets : [rtl, nitefury_ii]
+    tools:
+      vivado:
+        part : xc7a200tfbg484-2
+    toplevel : blinky_nitefury_ii
 
   opos6ul_sp:
     default_tool : ise
