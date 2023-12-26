@@ -1,0 +1,2 @@
+set_io -port_name {clk} -pin_name H7 -io_std LVCMOS18 -fixed true
+set_io -port_name {q} -pin_name N8 -io_std LVCMOS18 -fixed true
