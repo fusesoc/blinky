@@ -349,6 +349,11 @@ filesets:
       - polarfireeval/blinky_polarfireeval.v : {file_type : verilogSource}
       - polarfireeval/polarfireeval.pdc : {file_type : PDC}
 
+  polarfire_splashkit:
+    files:
+      - polarfire_splashkit/blinky_polarfire_splashkit.v : {file_type : verilogSource}
+      - polarfire_splashkit/polarfire_splashkit.pdc : {file_type : PDC}
+
   eclypse_z7:
     files:
       - eclypse_z7/blinky.xdc : {file_type : xdc}
@@ -1293,6 +1298,17 @@ targets:
       libero:
         <<: *liberoMPF300
         die : MPF300TS_ES
+
+  polarfire_splashkit:
+    default_tool: libero
+    description : Microsemi Polarfire Splash Kit
+    filesets : [rtl, polarfire_splashkit]
+    tools:
+      libero:
+        family : PolarFire
+        die : MPF300TS
+        package : FCG484
+    toplevel : blinky_polarfire_splashkit
 
   eclypse_z7:
     default_tool : vivado
