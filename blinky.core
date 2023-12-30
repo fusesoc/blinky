@@ -319,6 +319,16 @@ filesets:
   xc6sl9_hseda_eda6.1:
     files: [xc6sl9_hseda_eda6.1/blinky.ucf : {file_type : UCF}]
 
+  xem8320:
+    files:
+      - xem8320/blinky_xem8320.v : {file_type : verilogSource}
+      - xem8320/blinky.xdc : {file_type : xdc}
+
+  zuboard:
+    files:
+      - zuboard/blinky_zuboard.v : {file_type : verilogSource}
+      - zuboard/blinky.xdc : {file_type : xdc}
+
   zcu102:
     files:
       - zcu102/blinky_zcu102.v : {file_type : verilogSource}
@@ -1226,6 +1236,24 @@ targets:
         package : tqg144
         speed   : -2
     toplevel : blinky
+
+  xem8320:
+    default_tool: vivado
+    description : Opal Kelly XEM8320-AU25P Development Platform
+    filesets : [rtl, xem8320]
+    tools:
+      vivado:
+        part : xcau25p-ffvb676-2-e
+    toplevel : blinky_xem8320
+
+  zuboard:
+    default_tool: vivado
+    description : ZUBoard 1CG Development Board
+    filesets : [rtl, zuboard]
+    tools:
+      vivado:
+        part : xczu1cg-sbva484-1-e
+    toplevel : blinky_zuboard
 
   zcu102:
     default_tool: vivado
