@@ -225,6 +225,11 @@ filesets:
   machXO3_breakout:
     files: [machXO3_breakout/blinky.lpf : {file_type : LPF}]
 
+  max10_10m50evk:
+    files:
+      - max10_10m50evk/max10_10m50evk.sdc : {file_type : SDC}
+      - max10_10m50evk/pinmap.tcl   : {file_type: tclSource}
+
   max1000:
     files:
       - max1000/max1000.sdc : {file_type : SDC}
@@ -983,6 +988,17 @@ targets:
     tools:
       diamond: {part: LCMXO3LF-6900C-5BG256C}
     toplevel : blinky
+
+  max10_10m50evk:
+    default_tool : quartus
+    description : max10_10m50evk Development kit by Terasic
+    filesets : [rtl, max10_10m50evk]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Max 10
+        device : 10M50DAF484C6GES
+    toplevel: blinky
 
   max1000:
     <<: *default
