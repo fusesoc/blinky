@@ -991,7 +991,7 @@ targets:
 
   max10_10m50evk:
     default_tool : quartus
-    description : max10_10m50evk Development kit by Terasic
+    description : Intel MAX10 FPGA 10M50 Evaluation Kit
     filesets : [rtl, max10_10m50evk]
     parameters : [clk_freq_hz=50000000]
     tools:
