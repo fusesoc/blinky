@@ -221,6 +221,10 @@ https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/MachXO2Breakout
 
 https://www.latticesemi.com/products/developmentboardsandkits/machxo3lfstarterkit
 
+### max10_10m50evk
+
+https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m50-evaluation-kit.html 
+
 ### max1000
 
 https://shop.trenz-electronic.de/en/TEI0001-03-08-C8-MAX1000-IoT-Maker-Board-8KLE-8-MByte-RAM
