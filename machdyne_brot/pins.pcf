@@ -1,0 +1,4 @@
+# Machdyne Brot V4
+
+set_io clk 	35
+set_io q 	39

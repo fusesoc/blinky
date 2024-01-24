@@ -1,0 +1,4 @@
+# Machdyne Kuchen V1
+
+set_io clk 	F7
+set_io q 	C13

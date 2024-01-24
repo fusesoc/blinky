@@ -1,0 +1,4 @@
+# Machdyne Kolibri V0
+
+set_io clk 	G1
+set_io q 	B11

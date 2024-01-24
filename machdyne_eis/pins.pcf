@@ -1,0 +1,4 @@
+# Machdyne Eis V0
+
+set_io clk 	L5
+set_io q 	G3
