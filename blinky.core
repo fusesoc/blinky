@@ -117,6 +117,11 @@ filesets:
       - deca/deca.sdc : {file_type : SDC}
       - deca/pinmap.tcl   : {file_type: tclSource}
 
+  de10_lite:
+    files:
+      - de10_lite/de10_lite.sdc : {file_type : SDC}
+      - de10_lite/pinmap.tcl   : {file_type: tclSource}
+
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -737,6 +742,17 @@ targets:
       quartus:
         family : Max 10
         device : 10M50DAF484C6GES
+    toplevel: blinky
+
+  de10_lite:
+    default_tool : quartus
+    description : DE10-Lite Board by Terasic
+    filesets : [rtl, de10_lite]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Max 10
+        device : 10M50DAF484C7G
     toplevel: blinky
 
   de0_nano:

@@ -140,6 +140,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=165&No=836
 
+### de10_lite
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021
+
 ### de10_nano
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=1046
