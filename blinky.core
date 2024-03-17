@@ -273,6 +273,10 @@ filesets:
       - orangecrab/orangecrab_r02.lpf : {file_type : LPF}
       - orangecrab/blinky_orangecrab.v : {file_type : verilogSource}
 
+  pico_ice:
+    files:
+      - pico_ice/pinout.pcf : {file_type : PCF}
+
   pipistrello:
     files: [pipistrello/blinky.ucf : {file_type : UCF}]
 
@@ -1153,6 +1157,19 @@ targets:
       trellis:
         nextpnr_options : [--package, CSFBGA285, --25k]
     toplevel : blinky_orangecrab
+
+  pico_ice:
+    default_tool : icestorm
+    description : tinyVision.ai Pico-Ice OSHW Board
+    filesets : [rtl, proginfo, pico_ice]
+    parameters : [clk_freq_hz=12000000]
+    hooks:
+      post_run: [iceprog]
+    tools:
+      icestorm:
+        nextpnr_options : [--up5k]
+        pnr: next
+    toplevel : blinky
 
   pipistrello:
     default_tool : ise
