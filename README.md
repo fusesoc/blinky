@@ -221,6 +221,10 @@ https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/MachXO2Breakout
 
 https://www.latticesemi.com/products/developmentboardsandkits/machxo3lfstarterkit
 
+### max10_10m08evk
+
+https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m08-evaluation-kit.html 
+
 ### max10_10m50evk
 
 https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m50-evaluation-kit.html 
