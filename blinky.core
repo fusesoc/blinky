@@ -1002,7 +1002,7 @@ targets:
     tools:
       quartus:
         family : Max 10
-        device : 10M50SAE144C8G
+        device : 10M08SAE144C8G
     toplevel: blinky
 
   max10_10m50evk:
