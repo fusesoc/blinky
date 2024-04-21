@@ -140,6 +140,10 @@ https://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=165&No=836
 
+### de10_lite
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021
+
 ### de10_nano
 
 https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=1046
@@ -212,6 +216,42 @@ https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g
 ### kcu1500
 
 https://www.xilinx.com/products/boards-and-kits/dk-u1-kcu1500-g.html
+
+### Machdyne Brot
+
+https://github.com/machdyne/brot
+
+### Machdyne Eis
+
+https://github.com/machdyne/eis
+
+### Machdyne Kolibri
+
+https://github.com/machdyne/kolibri
+
+### Machdyne Konfekt
+
+https://github.com/machdyne/konfekt
+
+### Machdyne Kuchen
+
+https://github.com/machdyne/kuchen
+
+### Machdyne Minze
+
+https://github.com/machdyne/minze
+
+### Machdyne Noir
+
+https://github.com/machdyne/noir
+
+### Machdyne Riegel
+
+https://github.com/machdyne/riegel
+
+### Machdyne Schoko
+
+https://github.com/machdyne/schoko
 
 ### machXO2_breakout
 

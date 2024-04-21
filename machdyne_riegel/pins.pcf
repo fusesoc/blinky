@@ -1,0 +1,4 @@
+# Machdyne Riegel V3
+
+set_io clk 	L5
+set_io q 	H9

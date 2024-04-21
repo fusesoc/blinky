@@ -117,6 +117,11 @@ filesets:
       - deca/deca.sdc : {file_type : SDC}
       - deca/pinmap.tcl   : {file_type: tclSource}
 
+  de10_lite:
+    files:
+      - de10_lite/de10_lite.sdc : {file_type : SDC}
+      - de10_lite/pinmap.tcl   : {file_type: tclSource}
+
   de0_nano:
     files:
       - de0_nano/de0_nano.sdc : {file_type : SDC}
@@ -196,6 +201,9 @@ filesets:
   icebreaker:
     files: [icebreaker/pinout.pcf : {file_type : PCF}]
 
+  icev_wireless:
+    files: [icev_wireless/pinout.pcf : {file_type : PCF}]
+
   iceFUN:
     files:
       - iceFUN/blinky.v : {file_type : verilogSource}
@@ -269,6 +277,10 @@ filesets:
     files:
       - orangecrab/orangecrab_r02.lpf : {file_type : LPF}
       - orangecrab/blinky_orangecrab.v : {file_type : verilogSource}
+
+  pico_ice:
+    files:
+      - pico_ice/pinout.pcf : {file_type : PCF}
 
   pipistrello:
     files: [pipistrello/blinky.ucf : {file_type : UCF}]
@@ -406,6 +418,42 @@ filesets:
     files:
       - cora_z7/blinky_cora_z7.vhd : {file_type : vhdlSource}
       - cora_z7/blinky_cora_z7.xdc : {file_type : xdc}
+
+  machdyne_brot:
+    files:
+      - machdyne_brot/pins.pcf : {file_type : PCF}
+
+  machdyne_eis:
+    files:
+      - machdyne_eis/pins.pcf : {file_type : PCF}
+
+  machdyne_kolibri:
+    files:
+      - machdyne_kolibri/pins.pcf : {file_type : PCF}
+
+  machdyne_konfekt:
+    files:
+      - machdyne_konfekt/pins.lpf : {file_type : LPF}
+
+  machdyne_kuchen:
+    files:
+      - machdyne_kuchen/pins.pcf : {file_type : PCF}
+
+  machdyne_minze:
+    files:
+      - machdyne_minze/pins.lpf : {file_type : LPF}
+
+  machdyne_noir:
+    files:
+      - machdyne_noir/pins.lpf : {file_type : LPF}
+
+  machdyne_riegel:
+    files:
+      - machdyne_riegel/pins.pcf : {file_type : PCF}
+
+  machdyne_schoko:
+    files:
+      - machdyne_schoko/pins.lpf : {file_type : LPF}
 
 targets:
   default: &default
@@ -705,6 +753,17 @@ targets:
         device : 10M50DAF484C6GES
     toplevel: blinky
 
+  de10_lite:
+    default_tool : quartus
+    description : DE10-Lite Board by Terasic
+    filesets : [rtl, de10_lite]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Max 10
+        device : 10M50DAF484C7G
+    toplevel: blinky
+
   de0_nano:
     default_tool : quartus
     filesets : [rtl, de0_nano]
@@ -924,6 +983,18 @@ targets:
         pnr: next
     toplevel : blinky
 
+  icev_wireless:
+    default_tool : icestorm
+    filesets : [rtl, proginfo, icev_wireless]
+    hooks:
+      post_run: [iceprog]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      icestorm:
+        nextpnr_options: [--up5k, --package, sg48]
+        pnr: next
+    toplevel : blinky
+
   iceFUN:
     default_tool : icestorm
     filesets : [iceFUN]
@@ -1102,6 +1173,19 @@ targets:
       trellis:
         nextpnr_options : [--package, CSFBGA285, --25k]
     toplevel : blinky_orangecrab
+
+  pico_ice:
+    default_tool : icestorm
+    description : tinyVision.ai Pico-Ice OSHW Board
+    filesets : [rtl, proginfo, pico_ice]
+    parameters : [clk_freq_hz=12000000]
+    hooks:
+      post_run: [iceprog]
+    tools:
+      icestorm:
+        nextpnr_options : [--up5k]
+        pnr: next
+    toplevel : blinky
 
   pipistrello:
     default_tool : ise
@@ -1431,6 +1515,92 @@ targets:
       vivado:
         part : xc7z007sclg400-1
     toplevel : blinky_cora_z7_top
+
+  machdyne_brot:
+    default_tool: icestorm
+    filesets : [rtl, machdyne_brot]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--up5k, --package, sg48]
+        pnr : next
+    toplevel : blinky
+
+  machdyne_eis:
+    default_tool: icestorm
+    filesets : [rtl, machdyne_eis]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx4k, --package, bg121]
+        pnr : next
+    toplevel : blinky
+
+  machdyne_kolibri:
+    default_tool: icestorm
+    filesets : [rtl, machdyne_kolibri]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx4k, --package, bg121]
+        pnr : next
+    toplevel : blinky
+
+  machdyne_konfekt:
+    default_tool: trellis
+    filesets : [rtl, machdyne_konfekt]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      trellis:
+        nextpnr_options : [--12k --package CABGA256]
+    toplevel : blinky
+
+  machdyne_kuchen:
+    default_tool: icestorm
+    filesets : [rtl, machdyne_kuchen]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx8k, --package, ct256]
+        pnr : next
+    toplevel : blinky
+
+  machdyne_minze:
+    default_tool: trellis
+    filesets : [rtl, machdyne_minze]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      trellis:
+        nextpnr_options : [--12k --package CABGA256]
+    toplevel : blinky
+
+  machdyne_noir:
+    default_tool: trellis
+    filesets : [rtl, machdyne_noir]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      trellis:
+        nextpnr_options : [--45k --package CABGA256]
+    toplevel : blinky
+
+  machdyne_riegel:
+    default_tool: icestorm
+    filesets : [rtl, machdyne_riegel]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      icestorm:
+        nextpnr_options : [--hx4k, --package, bg121]
+        pnr : next
+    toplevel : blinky
+
+  machdyne_schoko:
+    default_tool: trellis
+    filesets : [rtl, machdyne_schoko]
+    parameters : [clk_freq_hz=48000000]
+    tools:
+      trellis:
+        nextpnr_options : [--45k --package CABGA256]
+    toplevel : blinky
 
 
 parameters:
