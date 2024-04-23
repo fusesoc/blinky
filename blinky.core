@@ -233,6 +233,11 @@ filesets:
   machXO3_breakout:
     files: [machXO3_breakout/blinky.lpf : {file_type : LPF}]
 
+  max10_10m08evk:
+    files:
+      - max10_10m08evk/max10_10m08evk.sdc : {file_type : SDC}
+      - max10_10m08evk/pinmap.tcl   : {file_type: tclSource}
+
   max10_10m50evk:
     files:
       - max10_10m50evk/max10_10m50evk.sdc : {file_type : SDC}
@@ -1059,6 +1064,17 @@ targets:
     tools:
       diamond: {part: LCMXO3LF-6900C-5BG256C}
     toplevel : blinky
+
+  max10_10m08evk:
+    default_tool : quartus
+    description : Intel MAX10 FPGA 10M08 Evaluation Kit
+    filesets : [rtl, max10_10m08evk]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Max 10
+        device : 10M08SAE144C8G
+    toplevel: blinky
 
   max10_10m50evk:
     default_tool : quartus
