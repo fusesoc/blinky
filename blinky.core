@@ -1084,6 +1084,8 @@ targets:
   max10_10m08evk:
     default_tool : quartus
     description : Intel MAX10 FPGA 10M08 Evaluation Kit
+    hooks:
+      post_run: [jbc]
     filesets : [rtl, max10_10m08evk]
     parameters : [clk_freq_hz=50000000]
     tools:
@@ -1642,3 +1644,7 @@ scripts:
     cmd : [python3, proginfo.py, dfu-util]
   dfu-util-fomu:
     cmd : [python3, proginfo.py, dfu-util-fomu]
+  jbc:
+    cmd : [quartus_jbcc, "-n", fusesoc_utils_blinky_1_1_1_pof.jam, fusesoc_utils_blinky_1_1_1_pof.jbc]
+
+
