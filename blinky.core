@@ -184,6 +184,11 @@ filesets:
       - genesys2/blinky.xdc : {file_type : xdc}
       - genesys2/blinky_genesys2.v : {file_type : verilogSource}
 
+  gmm7550:
+    files:
+      - gmm7550/blinky_gmm7550.v : {file_type : verilogSource}
+      - gmm7550/gmm7550.ccf : {file_type : CCF}
+
   go_board:
     files:
       - go_board/pinout.pcf : {file_type : PCF}
@@ -930,6 +935,17 @@ targets:
         board_device_index : 2
         cable : "USB-BlasterII"  # Is sufficient
     toplevel: blinky
+
+  gmm7550:
+    description: CologneChip GateMate FPGA Module
+    default_tool : gatemate
+    filesets : [rtl, gmm7550]
+    toplevel : blinky_gmm7550
+    tools :
+      gatemate:
+        device : CCGM1A1
+        yosys_synth_options : [ -nomx8 ]
+        p_r_options : [ +uCIO ]
 
   go_board:
     default_tool : icestorm
