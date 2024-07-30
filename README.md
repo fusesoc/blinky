@@ -30,6 +30,8 @@ The simulation target has a number of target-specific configuration parameters t
 
 To list all simulation parameters, run `fusesoc run --target=sim fusesoc:utils:blinky --help`.
 
+The simulation target depends on the `vlog_tb_utils` core which is found in another library. If you don't already have the `fusesoc-cores` library in your workspace, you can add it with `fusesoc library add fusesoc-cores https://github.com/fusesoc/fusesoc-cores`.
+
 *Example:* To run four pulses with a simulated clock frequency of 4MHz and creating a VCD file, run `fusesoc run --target=sim fusesoc:utils:blinky --pulses=4 --clk_freq_hz=4000000 --vcd`.
 
 The default simulator to use is Icarus Verilog, but other simulators can be used by setting the `--tool` parameter after the `run` command.
