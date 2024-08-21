@@ -52,6 +52,10 @@ The following boards are currently supported:
 
 https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html
 
+### Altera Agilex 5 FPGA E-Series 065B Premium Development Kit
+
+https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html
+
 ### AnalogMax
 
 https://www.arrow.com/en/products/tei0001-03-16-c8/trenz-electronic-gmbh

@@ -7,6 +7,11 @@ filesets:
       - ac701/blinky_ac701.v : {file_type : verilogSource}
       - ac701/blinky.xdc : {file_type : xdc}
 
+  agilex5_dk:
+    files:
+      - agilex5/agilex5.sdc : {file_type : SDC}
+      - agilex5/agilex5_dk-a5e065bb32aes1.tcl  : {file_type: tclSource}
+
   alchitry_au:
     files:
       - alchitry_au/blinky.xdc : {file_type : xdc}
@@ -473,6 +478,16 @@ targets:
       vivado:
         part : xc7a200t-fbg676-2
     toplevel : blinky_ac701
+
+  agilex5_dk:
+    default_tool : quartus
+    filesets : [rtl, agilex5_dk]
+    parameters : [clk_freq_hz=100000000]
+    tools:
+      quartus:
+        family : Agilex
+        device : A5ED065BB32AE6SR0
+    toplevel: blinky
 
   alchitry_au:
     default_tool: vivado
