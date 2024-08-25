@@ -90,6 +90,11 @@ filesets:
       - cyc1000/cyc1000.sdc : {file_type : SDC}
       - cyc1000/pinmap.tcl  : {file_type: tclSource}
 
+  cyc5000:
+    files:
+      - cyc5000/cyc5000.sdc : {file_type : SDC}
+      - cyc5000/cyc5000.tcl  : {file_type: tclSource}
+
   cisco-hwic-3g-cdma:
     files:
       - cisco-hwic-3g-cdma/cisco-hwic-3g-cdma.sdc : {file_type : SDC}
@@ -702,6 +707,18 @@ targets:
       quartus:
         family : Cyclone 10 LP
         device : 10CL025YU256C8G
+
+  cyc5000:
+    <<: *default
+    default_tool : quartus
+    hooks:
+      post_run: [rpd]
+    filesets_append : [cyc5000]
+    parameters : [clk_freq_hz=12000000]
+    tools:
+      quartus:
+        family : Cyclone V
+        device : 5CEBA2U15C8
 
   cisco-hwic-3g-cdma:
     <<: *default
@@ -1646,5 +1663,6 @@ scripts:
     cmd : [python3, proginfo.py, dfu-util-fomu]
   jbc:
     cmd : [quartus_jbcc, "-n", fusesoc_utils_blinky_1_1_1_pof.jam, fusesoc_utils_blinky_1_1_1_pof.jbc]
-
+  rpd:
+    cmd : [quartus_cpf, "-c", fusesoc_utils_blinky_1_1_1.pof, fusesoc_utils_blinky_1_1_1.rpd]
 
