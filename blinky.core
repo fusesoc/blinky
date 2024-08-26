@@ -712,8 +712,8 @@ targets:
     <<: *default
     default_tool : quartus
     hooks:
-      post_run: [rpd]
-    filesets_append : [cyc5000]
+      post_run: [rpd, quartus-OFL]
+    filesets_append : [proginfo, cyc5000]
     parameters : [clk_freq_hz=12000000]
     tools:
       quartus:
@@ -1661,6 +1661,8 @@ scripts:
     cmd : [python3, proginfo.py, dfu-util]
   dfu-util-fomu:
     cmd : [python3, proginfo.py, dfu-util-fomu]
+  quartus-OFL: 
+    cmd : [python3, proginfo.py, quartus-OFL]
   jbc:
     cmd : [quartus_jbcc, "-n", fusesoc_utils_blinky_1_1_1_pof.jam, fusesoc_utils_blinky_1_1_1_pof.jbc]
   rpd:

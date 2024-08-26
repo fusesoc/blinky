@@ -20,3 +20,8 @@ elif sys.argv[1] == 'dfu-util':
 elif sys.argv[1] == 'dfu-util-fomu':
     print("Download and install dfu-util from http://dfu-util.sourceforge.net/")
     print("dfu-util -e -d 1209:5bf0 -D {}".format(os.path.join(os.getcwd(), system_name+".bin")))
+elif sys.argv[1] == 'quartus-OFL':
+    print("  To load SRAM:")
+    print("    openFPGALoader -b board_name {}".format(os.path.join(os.getcwd(), system_name+".rbf")))
+    print("  To load Flash:")
+    print("    openFPGALoader -b board_name -f {}".format(os.path.join(os.getcwd(), system_name+".rpd")))
