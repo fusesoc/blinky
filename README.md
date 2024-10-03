@@ -48,6 +48,10 @@ Board support
 
 The following boards are currently supported:
 
+### A-C4E6E1 Cyclone IV FPGA EP4CE6E22C8N Development Board
+
+http://land-boards.com/blwiki/index.php?title=A-C4E6_Cyclone_IV_FPGA_EP4CE6E22C8N_Development_Board
+
 ### AC701
 
 https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html
