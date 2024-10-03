@@ -2,6 +2,11 @@ CAPI=2:
 name : fusesoc:utils:blinky:1.1.1
 
 filesets:
+  a_c4e6e10:
+    files:
+      - a_c4e6e10/blinky_a_c4e6e10.sv : {file_type : systemVerilogSource}
+      - a_c4e6e10/a_c4e6e10.tcl : {file_type : tclSource}
+      
   ac701:
     files:
       - ac701/blinky_ac701.v : {file_type : verilogSource}
@@ -474,6 +479,16 @@ targets:
   default: &default
     filesets : [rtl]
     toplevel: ["is_toplevel? (blinky)"]
+
+  a_c4e6e10:
+    default_tool : quartus
+    filesets : [rtl, a_c4e6e10]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Cyclone IV E
+        device : EP4CE6E22C8
+    toplevel: blinky_a_c4e6e10
 
   ac701:
     default_tool: vivado
