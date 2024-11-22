@@ -414,6 +414,8 @@ filesets:
       - stlv7325/blinky.xdc : {file_type : xdc}
       - stlv7325/blinky_stlv7325.sv : {file_type : systemVerilogSource}
 
+  te0802: {files: [te0802/blinky.xdc : {file_type : xdc}]}
+
   Wukong_v1:
     files:
       - QMTECH_Artix7_Wukong/Wukong_v1.xdc : {file_type : xdc}
@@ -1291,6 +1293,15 @@ targets:
       apicula:
         device: GW1N-LV1QN48C6/I5
     toplevel: top
+
+  te0802:
+    default_tool : vivado
+    filesets : [rtl, te0802]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      vivado:
+        part : xczu2cg-sbva484-1-e
+    toplevel : blinky
 
   tinyfpga_bx:
     default_tool : icestorm

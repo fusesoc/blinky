@@ -363,6 +363,12 @@ https://tangnano.sipeed.com/en/
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx
 
+### Trenz Electronic TE0802
+
+Target `te0802`.
+
+https://shop.trenz-electronic.de/en/TE0802-02-2AEV2-A-MPSoC-Development-Board-with-AMD-Zynq-UltraScale-ZU2-and-1-GB-LPDDR4
+
 ### ultra96_v2
 
 https://www.avnet.com/wps/portal/us/products/avnet-boards/avnet-board-families/ultra96-v2/
