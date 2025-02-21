@@ -219,6 +219,18 @@ https://www.crowdsupply.com/1bitsquared/icebreaker-fpga
 
 https://www.robot-electronics.co.uk/products/fpga/icefun.html
 
+### iCESugar
+
+[MuseLab交流群 homepage](https://www.muselab-tech.com/wan-quan-shi-yong-kai-yuan-gong-ju-lian-de-fpgadan-ban/)\
+[Shop](https://www.aliexpress.com/item/4001201771358.html)\
+[GitHub examples](https://github.com/wuxx/icesugar/)
+
+### iCESugar-nano
+
+[MuseLab交流群 homepage](https://www.muselab-tech.com/icesugar-nano-kai-yuan-fpgakai-fa-ban/)\
+[Shop](https://www.aliexpress.com/item/1005002073816863.html)\
+[GitHub examples](https://github.com/wuxx/icesugar-nano)
+
 ### iceWerx
 
 https://www.robot-electronics.co.uk/icewerx.html

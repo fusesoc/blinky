@@ -234,6 +234,10 @@ filesets:
       - icesugar/blinky.v : {file_type : verilogSource}
       - icesugar/icesugar.pcf : {file_type : PCF}
 
+  icesugar_nano:
+    files:
+      - icesugar_nano/icesugar-nano.pcf : {file_type : PCF}
+
   iceWerx:
     files: [iceWerx/pinout.pcf : {file_type : PCF}]
 
@@ -1080,6 +1084,19 @@ targets:
         nextpnr_options : [--up5k, --package, sg48]
         pnr : next
     toplevel : Top
+
+  icesugar_nano:
+    default_tool : icestorm
+    description : iCESugar-nano board
+    filesets : [rtl, proginfo, icesugar_nano]
+    parameters : [clk_freq_hz=12000000]
+    hooks:
+      post_run: [icesprog]
+    tools:
+       icestorm:
+        nextpnr_options : [--lp1k, --package, cm36]
+        pnr : next
+    toplevel : blinky
 
   iceWerx:
     default_tool : icestorm
