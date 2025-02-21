@@ -1,0 +1,5 @@
+# Icesugar-nano board
+
+set_io clk D1
+
+set_io q B6
