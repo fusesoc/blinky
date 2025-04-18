@@ -183,6 +183,15 @@ https://github.com/xjtuecho/EBAZ4205
 
 https://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/ECP5EvaluationBoard
 
+### EDGE ZYNQ SoC FPGA Development Board - edgeZ7_20
+
+EDGE ZYNQ SoC FPGA Development Board is a feature rich and high-performance Single Board Computer built around the Xilinx Zynq-7010 (XC7Z010) or Zynq-7020 (XC7Z020). It features integrated dual-core ARM Cortex-A9 processor with Xilinx 7-series FPGA.
+
+Part Number : XC7Z020-1CLG400C
+
+https://allaboutfpga.com/product/edge-zynq-soc-fpga-development-board/
+https://github.com/AllAboutFPGA/EDGE-FPGA-Kit-Board-Files/tree/master/edgeZ7_20/A.0
+
 ### EP2C5T144 Development Board
 
 http://land-boards.com/blwiki/index.php?title=Cyclone_II_EP2C5_Mini_Dev_Board
