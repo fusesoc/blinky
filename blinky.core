@@ -325,6 +325,11 @@ filesets:
       - pynq_z2/blinky_pynq_z2.v : {file_type : verilogSource}
       - pynq_z2/blinky.xdc : {file_type : xdc}
 
+  edgeZ7_20:
+    files:
+      - edgeZ7_20/blinky_edgeZ7_20.v : {file_type : verilogSource}
+      - edgeZ7_20/blinky.xdc : {file_type : xdc}
+
   qmtech_5cefa5f23:
     files:
      - qmtech_5cefa5f23/blinky_qmtech_5cefa5f23.v : {file_type : verilogSource }
@@ -1291,6 +1296,15 @@ targets:
       vivado:
         part : xc7z020clg400-1
     toplevel : blinky_pynq_z2
+
+  edgeZ7_20:
+    default_tool: vivado
+    description : EdgeZ7-20 Zynq Z7020 Development Board
+    filesets : [rtl, edgeZ7_20]
+    tools:
+      vivado:
+        part : xc7z020clg400-1
+    toplevel : blinky_edgeZ7_20
 
   qmtech_5cefa5f23:
     default_tool : mistral
