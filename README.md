@@ -98,6 +98,13 @@ https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/
 
 http://www.alinx.com/en/index.php/default/content/143.html
 
+### axku5
+
+https://www.en.alinx.com/Product/FPGA-Development-Boards/Kintex-UltraScale-plus/AXKU5.html
+
+This board contains a Xilinx Kintex UltraScale+ XCKU5P FPGA.
+A relatively large FPGA which is still supported by the (free) Vivado ML Standard Edition.
+
 ### bemicro_max10
 
 https://www.arrow.com/en/products/bemicromax10/arrow-development-tools
