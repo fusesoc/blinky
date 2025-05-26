@@ -676,13 +676,12 @@ targets:
     toplevel : blinky
 
   axku5:
-    default_tool: vivado
     description : Alinx AXKU5 Evaluation Board with XCKU5P FPGA
     filesets: [rtl, axku5]
+    flow: vivado
+    flow_options:
+      part: xcku5p-ffvb676-2-i
     parameters: [clk_freq_hz=200_000_000]
-    tools:
-      vivado:
-        part: xcku5p-ffvb676-2-i
     toplevel: blinky_axku5  
 
   basys3:
