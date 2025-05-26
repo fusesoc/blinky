@@ -73,6 +73,11 @@ filesets:
     files:
       - ax309/blinky.ucf : {file_type : UCF}
 
+  axku5:
+    files:
+      - axku5/blinky_axku5.v : {file_type : verilogSource}
+      - axku5/blinky.xdc : {file_type : xdc}
+
   basys3:
     files: [basys3/blinky.xdc : {file_type : xdc}]
 
@@ -669,6 +674,16 @@ targets:
         package : ftg256
         speed   : -3
     toplevel : blinky
+
+  axku5:
+    default_tool: vivado
+    description : Alinx AXKU5 Evaluation Board with XCKU5P FPGA
+    filesets: [rtl, axku5]
+    parameters: [clk_freq_hz=200_000_000]
+    tools:
+      vivado:
+        part: xcku5p-ffvb676-2-i
+    toplevel: blinky_axku5  
 
   basys3:
     default_tool : vivado
