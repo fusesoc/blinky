@@ -94,9 +94,17 @@ https://alhambrabits.com/alhambra/
 
 https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/
 
+### Atum A3 Nano (Terasic)
+
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1373 
+
 ### ax309
 
 http://www.alinx.com/en/index.php/default/content/143.html
+
+### AXE5000 (Arrow)
+
+https://github.com/ArrowElectronics/Agilex-5/wiki/Agilex-5-E-Series-AXE5000-Development-Platform 
 
 ### axku5
 

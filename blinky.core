@@ -69,9 +69,19 @@ filesets:
   arty_z7_20:
     files: [arty_z7_20/blinky.xdc : {file_type : xdc}]
 
+  atum_a3_nano:
+    files:
+      - atum_a3_nano/atum_a3_nano.sdc : {file_type : SDC}
+      - atum_a3_nano/atum_a3_nano.tcl  : {file_type: tclSource}
+
   ax309:
     files:
       - ax309/blinky.ucf : {file_type : UCF}
+
+  axe5000:
+    files:
+      - axe5000/axe5000.sdc : {file_type : SDC}
+      - axe5000/axe5000.tcl  : {file_type: tclSource}
 
   axku5:
     files:
@@ -662,6 +672,16 @@ targets:
         part : xc7z020clg400-1
     toplevel : blinky
 
+  atum_a3_nano:
+    default_tool : quartus
+    filesets : [rtl, atum_a3_nano]
+    parameters : [clk_freq_hz=50000000]
+    tools:
+      quartus:
+        family : Agilex 3
+        device : A3CZ135BB18AE7S
+    toplevel: blinky
+
   ax309:
     default_tool : ise
     description : XILINX Spartan-6 XC6SLX9 FPGA Development Board
@@ -674,6 +694,16 @@ targets:
         package : ftg256
         speed   : -3
     toplevel : blinky
+
+  axe5000:
+    default_tool : quartus
+    filesets : [rtl, axe5000]
+    parameters : [clk_freq_hz=25000000]
+    tools:
+      quartus:
+        family : Agilex 5
+        device : A5EC008BM16AE6S
+    toplevel: blinky
 
   axku5:
     description : Alinx AXKU5 Evaluation Board with XCKU5P FPGA
