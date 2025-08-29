@@ -331,6 +331,11 @@ https://www.microsemi.com/existing-parts/parts/150789
 
 https://www.microchip.com/en-us/development-tool/mpf300-splash-kit
 
+### Mimas A7
+
+https://numato.com/docs/mimas-artix-7-fpga-development-board-with-ddr-sdram-and-gigabit-ethernet/
+
+
 ### MYIR FZ3 - Deep Learning Accelerator Card
 
 http://www.myirtech.com/list.asp?id=630
