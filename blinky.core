@@ -287,6 +287,11 @@ filesets:
       - max1000/max1000.sdc : {file_type : SDC}
       - max1000/pinmap.tcl  : {file_type: tclSource}
 
+  mimas_a7:
+    files:
+      - mimas_a7/blinky_mimas_a7.v : {file_type : verilogSource}
+      - mimas_a7/blinky.xdc : {file_type : xdc}
+
   mini_s7: {files: [mini_s7/blinky.xdc : {file_type : xdc}]}
 
   myir_fz3: {files: [myir_fz3/blinky.xdc : {file_type : xdc}]}
@@ -1229,6 +1234,14 @@ targets:
       quartus:
         family : MAX 10
         device : 10M08SAU169C8G
+
+  mimas_a7:
+    description: Numato Lab Mimas A7 development board
+    filesets : [rtl, mimas_a7]
+    flow: vivado
+    flow_options:
+        part : xc7a50t-fgg484-1
+    toplevel : blinky_mimas_a7
 
   mini_s7:
     default_tool: vivado
