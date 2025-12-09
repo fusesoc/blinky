@@ -1054,8 +1054,9 @@ targets:
     tools :
       gatemate:
         device : CCGM1A1
-        yosys_synth_options : [ -nomx8 ]
-        p_r_options : [ +uCIO ]
+        yosys_synth_options : [ -luttree -nomx8 ]
+        nextpnr_options : [ --router router2 ]
+        nextpnr_log_file : nextpnr.log
 
   go_board:
     default_tool : icestorm
