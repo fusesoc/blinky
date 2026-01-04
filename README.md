@@ -90,13 +90,17 @@ The cores for the Cu are built using IceStorm, and the cores for the Au and Au+ 
 
 https://alhambrabits.com/alhambra/
 
+### Alinx AX7A200B
+
+https://www.en.alinx.com/Product/FPGA-Development-Boards/Artix-7/AX7A200B.html
+
 ### arty_a7_35t/arty_a7_100t
 
 https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/
 
 ### Atum A3 Nano (Terasic)
 
-https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1373 
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1373
 
 ### ax309
 
@@ -104,7 +108,7 @@ http://www.alinx.com/en/index.php/default/content/143.html
 
 ### AXE5000 (Arrow)
 
-https://github.com/ArrowElectronics/Agilex-5/wiki/Agilex-5-E-Series-AXE5000-Development-Platform 
+https://github.com/ArrowElectronics/Agilex-5/wiki/Agilex-5-E-Series-AXE5000-Development-Platform
 
 ### axku5
 
@@ -317,11 +321,11 @@ https://www.latticesemi.com/products/developmentboardsandkits/machxo3lfstarterki
 
 ### max10_10m08evk
 
-https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m08-evaluation-kit.html 
+https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m08-evaluation-kit.html
 
 ### max10_10m50evk
 
-https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m50-evaluation-kit.html 
+https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/max/10m50-evaluation-kit.html
 
 ### max1000
 
@@ -384,9 +388,9 @@ https://github.com/ChinaQMTECH/QM_CYCLONE_V/tree/master/5CEFA5F23
 This example use [mistral toolchain](https://github.com/Ravenslofty/mistral)
 
 ### QMTECH Wukong Board Artix-7 XC7A100T & XC7A200T
-The Wukong board have two revisions : [Artix-7 XC7A100T](https://github.com/ChinaQMTECH/QM_XC7A100T_WUKONG_BOARD/blob/master/QMTECH_Artix-7_XC7A100T_Wukong_Board_User_Manual(Hardware)_V01.pdf) and Artix-7 XC7A[100T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A100T/QMTECH_Artix-7_XC7A100T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf)-[200T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A200T/QMTECH_Artix-7_XC7A200T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf) . The first revision have the 50 MHz clock on the wrong pin and don't have micro sd. 
+The Wukong board have two revisions : [Artix-7 XC7A100T](https://github.com/ChinaQMTECH/QM_XC7A100T_WUKONG_BOARD/blob/master/QMTECH_Artix-7_XC7A100T_Wukong_Board_User_Manual(Hardware)_V01.pdf) and Artix-7 XC7A[100T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A100T/QMTECH_Artix-7_XC7A100T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf)-[200T](https://github.com/ChinaQMTECH/XC7A100T-200T_Wukong_Board/blob/main/User_Manual_XC7A200T/QMTECH_Artix-7_XC7A200T_Wukong_Board_V2_User_Manual(Hardware)_V01.pdf) . The first revision have the 50 MHz clock on the wrong pin and don't have micro sd.
 
-Targets are `Wukong_v1` for revision 1 , `Wukong_100t_v2` and `Wukong_200t_v2` for revision 2. Those boards can be programmed with openFPGALoader.  
+Targets are `Wukong_v1` for revision 1 , `Wukong_100t_v2` and `Wukong_200t_v2` for revision 2. Those boards can be programmed with openFPGALoader.
 
 ### RZ-EasyFPGA A2.x
 

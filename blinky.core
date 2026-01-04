@@ -6,7 +6,7 @@ filesets:
     files:
       - a_c4e6e10/blinky_a_c4e6e10.sv : {file_type : systemVerilogSource}
       - a_c4e6e10/a_c4e6e10.tcl : {file_type : tclSource}
-      
+
   ac701:
     files:
       - ac701/blinky_ac701.v : {file_type : verilogSource}
@@ -41,6 +41,11 @@ filesets:
 
   alhambra_II:
     files: [alhambra_II/pinout.pcf : {file_type : PCF}]
+
+  alinx_ax7a200b:
+    files:
+      - alinx_ax7a200b/blinky_alinx_ax7a200b.v : {file_type : verilogSource}
+      - alinx_ax7a200b/blinky.xdc : {file_type : xdc}
 
   AnalogMax:
     files:
@@ -610,6 +615,15 @@ targets:
         pnr : next
     toplevel : blinky
 
+  alinx_ax7a200b:
+    default_tool: vivado
+    description : Alinx AX7A200B Development Board
+    filesets : [rtl, alinx_ax7a200b]
+    tools:
+      vivado:
+        part : xc7a200t-fbg484-2
+    toplevel : blinky_alinx_ax7a200b
+
   AnalogMax:
     default_tool : quartus
     filesets : [rtl, AnalogMax]
@@ -720,7 +734,7 @@ targets:
     flow_options:
       part: xcku5p-ffvb676-2-i
     parameters: [clk_freq_hz=200_000_000]
-    toplevel: blinky_axku5  
+    toplevel: blinky_axku5
 
   basys3:
     default_tool : vivado
@@ -1801,7 +1815,7 @@ scripts:
     cmd : [python3, proginfo.py, dfu-util]
   dfu-util-fomu:
     cmd : [python3, proginfo.py, dfu-util-fomu]
-  quartus-OFL: 
+  quartus-OFL:
     cmd : [python3, proginfo.py, quartus-OFL]
   jbc:
     cmd : [quartus_jbcc, "-n", fusesoc_utils_blinky_1_1_1_pof.jam, fusesoc_utils_blinky_1_1_1_pof.jbc]
