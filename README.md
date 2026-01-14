@@ -412,6 +412,14 @@ https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/
 
 https://tangnano.sipeed.com/en/
 
+### tang_nano_9k
+
+https://wiki.sipeed.com/hardware/en/tang/Tang-Nano-9K/Nano-9K.html
+
+### tang_nano_20k
+
+https://wiki.sipeed.com/hardware/en/tang/tang-nano-20k/nano-20k.html
+
 ### tinyfpga_bx
 
 https://www.crowdsupply.com/tinyfpga/tinyfpga-bx

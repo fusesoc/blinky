@@ -371,6 +371,16 @@ filesets:
       - tang_nano/blinky.v : {file_type : verilogSource}
       - tang_nano/tangnano.cst : {file_type : CST}
 
+  tang_nano_9k:
+    files:
+      - tang_nano_9k/tang_nano_9k.cst : {file_type : CST}
+      - tang_nano_9k/tang_nano_9k.sdc : {file_type : SDC}
+
+  tang_nano_20k:
+    files:
+      - tang_nano_20k/tang_nano_20k.cst : {file_type : CST}
+      - tang_nano_20k/tang_nano_20k.sdc : {file_type : SDC}
+
   tb:
     files: [blinky_tb.v : {file_type : verilogSource}]
     depend: [vlog_tb_utils]
@@ -1439,6 +1449,22 @@ targets:
         device: GW1N-LV1QN48C6/I5
     toplevel: top
 
+  tang_nano_9k:
+    filesets: [rtl, tang_nano_9k]
+    flow: apicula
+    flow_options:
+        board: tangnano9k
+    parameters: [clk_freq_hz=27_000_000]
+    toplevel: blinky
+
+  tang_nano_20k:
+    filesets: [rtl, tang_nano_20k]
+    flow: apicula
+    flow_options:
+        board: tangnano20k
+    parameters: [clk_freq_hz=27_000_000]
+    toplevel: blinky
+
   te0802:
     default_tool : vivado
     filesets : [rtl, te0802]
@@ -1790,7 +1816,6 @@ targets:
       trellis:
         nextpnr_options : [--45k --package CABGA256]
     toplevel : blinky
-
 
 parameters:
   clk_freq_hz:
