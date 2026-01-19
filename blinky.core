@@ -17,6 +17,11 @@ filesets:
       - agilex5/agilex5.sdc : {file_type : SDC}
       - agilex5/agilex5_dk-a5e065bb32aes1.tcl  : {file_type: tclSource}
 
+  agilex3_dk:
+    files:
+      - agilex3/agilex3.sdc : {file_type : SDC}
+      - agilex3/agilex3_dk-a3w135bm16aea.tcl  : {file_type: tclSource}
+
   alchitry_au:
     files:
       - alchitry_au/blinky.xdc : {file_type : xdc}
@@ -546,6 +551,17 @@ targets:
       quartus:
         family : Agilex
         device : A5ED065BB32AE6SR0
+    toplevel: blinky
+
+  agilex3_dk:
+    default_tool : quartus
+    description : Agilex 3 FPGA and SoC C-Series Development Board
+    filesets : [rtl, agilex3_dk]
+    parameters : [clk_freq_hz=250000000]
+    tools:
+      quartus:
+        family : Agilex
+        device : A3CW135BM16AE6S
     toplevel: blinky
 
   alchitry_au:
