@@ -56,6 +56,10 @@ http://land-boards.com/blwiki/index.php?title=A-C4E6_Cyclone_IV_FPGA_EP4CE6E22C8
 
 https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html
 
+### Altera Agilex 3 FPGA and SoC C-Series Development Kit
+
+https://www.altera.com/products/devkit/a1jui000006ty5dmae/agilex-3-fpga-and-soc-c-series-development-kit
+
 ### Altera Agilex 5 FPGA E-Series 065B Premium Development Kit
 
 https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html
