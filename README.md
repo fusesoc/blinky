@@ -347,6 +347,9 @@ https://www.microchip.com/en-us/development-tool/mpf300-splash-kit
 
 https://numato.com/docs/mimas-artix-7-fpga-development-board-with-ddr-sdram-and-gigabit-ethernet/
 
+### Mimas S6
+
+https://numato.com/product/mimas-spartan-6-fpga-development-board
 
 ### MYIR FZ3 - Deep Learning Accelerator Card
 
