@@ -1,0 +1,8 @@
+# UCF Location Constraints for 50 MHz Clock Source
+NET "clk" LOC = "E12" | IOSTANDARD = LVCMOS33 ;
+
+# Define clock period for 50 MHz oscillator
+NET "clk" PERIOD = 20.0ns HIGH 50%;
+
+# UCF Constraints for a discrete LED
+NET "q" LOC = "R20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
