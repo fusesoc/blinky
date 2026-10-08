@@ -271,6 +271,13 @@ https://www.robot-electronics.co.uk/products/fpga/icefun.html
 
 https://www.robot-electronics.co.uk/icewerx.html
 
+### icoboard
+
+[Trenz Electronic product page](https://www.trenz-electronic.de/en/icoBoard-Version-1.1-with-8-Mbit-SRAM/TE0887-04-M)\
+[icoTools](https://github.com/cliffordwolf/icotools)
+
+The board has no programming interface of its own. It is plugged into a Raspberry Pi, which loads the bitstream with icoprog.
+
 ### lx9_microboard
 
 https://www.avnet.com/shop/us/products/avnet-engineering-services/aes-s6mb-lx9-g-3074457345628965461/

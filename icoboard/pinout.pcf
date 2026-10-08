@@ -1,0 +1,7 @@
+# icoBOARD V1.1 (Trenz Electronic TE0887, iCE40HX8K-CT256)
+
+# 100 MHz oscillator (U1)
+set_io clk 	R9
+
+# Onboard green LED1 (D2)
+set_io q 	C8
